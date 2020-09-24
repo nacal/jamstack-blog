@@ -1,5 +1,5 @@
 <template>
-  <section class="index">
+  <section class="p-posts">
     <card
       v-for="post in posts"
       v-bind:key="post.fields.slug"
@@ -17,7 +17,6 @@ import { createClient } from "~/plugins/contentful.js";
 
 const client = createClient();
 export default {
-  transition: "slide-left",
   components: {
     Card,
   },
@@ -36,12 +35,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.index {
-  display: flex;
-
-  flex-wrap: wrap;
-}
-
-</style>

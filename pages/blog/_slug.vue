@@ -12,7 +12,6 @@ import { createClient } from "~/plugins/contentful.js";
 
 const client = createClient();
 export default {
-  transition: "slide-left",
   async asyncData({ env, params }) {
     return await client
       .getEntries({

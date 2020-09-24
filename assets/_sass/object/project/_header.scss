@@ -1,0 +1,15 @@
+@charset 'UTF-8';
+/*
+  Header
+-----------------------------------------------------*/
+
+.p-header {
+  height: 100%;
+
+  &__title {
+    margin: 0 auto;
+    width: 240px;
+    text-align: center;
+    line-height: 4rem;
+  }
+}

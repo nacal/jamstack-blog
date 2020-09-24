@@ -1,0 +1,17 @@
+@charset 'UTF-8';
+/*
+  Posts
+-----------------------------------------------------*/
+
+.p-posts {
+  display: grid;
+
+  gap: 32px 64px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  &__item {
+    margin: 0 auto;
+    padding: 15px;
+    text-align: center;
+  }
+}
