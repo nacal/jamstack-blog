@@ -12,3 +12,5 @@ dist
 
 # dotenv
 .env
+
+.DS_Store
