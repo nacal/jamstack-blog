@@ -4,8 +4,6 @@
 -----------------------------------------------------*/
 
 .p-post {
-  border: 1px solid $sub-color;
-
   &__figure {
     position: relative;
     display: block;
@@ -48,6 +46,7 @@
   &__title {
     padding-bottom: 1rem;
     height: 6rem;
+    font-weight: 700;
   }
 
   &__data {
@@ -57,7 +56,7 @@
   &__tag {
     padding: .2rem .4rem;
     background-color: $sub-color;
-    color: $main-color;
+    color: $secondary-text-color;
   }
 
   &__date {

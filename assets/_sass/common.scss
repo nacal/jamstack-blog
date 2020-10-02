@@ -14,6 +14,7 @@
   2.0 - Layout
 ===================================================== */
 @import 'Layout/container';
+@import 'Layout/body';
 @import 'Layout/header';
 @import 'Layout/main';
 @import 'Layout/footer';
@@ -27,6 +28,7 @@
 -----------------------------------------------------*/
 @import 'object/component/flex';
 @import 'object/component/grid';
+@import 'object/component/copyright';
 
 /*
   3.2 - Project
@@ -35,6 +37,7 @@
 @import 'object/project/blogTitle';
 @import 'object/project/posts';
 @import 'object/project/post';
+@import 'object/project/footer';
 
 /*
   3.2 - Utility
