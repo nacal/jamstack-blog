@@ -1,11 +1,8 @@
 @charset 'UTF-8';
 /*
-  Footer
+  Copyright
 -----------------------------------------------------*/
 
-.l-footer {
-  height: 4rem;
-
-  @include mq(tab) {
-  }
+.c-copyright {
+  font-size: .75rem;
 }

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="l-body">
     <header class="l-header">
       <div class="p-header">
         <div class="l-container">
@@ -14,8 +14,15 @@
       </div>
       <!-- /.p-header -->
     </header>
-    <main class="l-container">
+    <main class="l-container l-main">
       <nuxt />
     </main>
+    <footer class="l-footer">
+      <div class="p-footer">
+        <article class="p-footer__copyright c-copyright u-flexCentering">
+          <small lang="en">&copy; 2020 Hikaru Nakata.</small>
+        </article>
+      </div>
+    </footer>
   </div>
 </template>

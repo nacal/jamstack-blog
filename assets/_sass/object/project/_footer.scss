@@ -1,0 +1,14 @@
+@charset 'UTF-8';
+/*
+  Footer
+-----------------------------------------------------*/
+
+.p-footer {
+  height: 100%;
+  background-color: $sub-color;
+
+  &__copyright {
+    height: 100%;
+    color: $secondary-text-color;
+  }
+}
