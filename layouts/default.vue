@@ -3,10 +3,10 @@
     <header class="l-header">
       <div class="p-header">
         <div class="l-container">
-          <h1 class="p-header__title p-blogTitle">
+          <h1 class="p-header__title p-blogTitle u-flexCentering">
             <!-- <span class="u-screenReaderText" lang="en">Blog title</span> -->
             <a href="./">
-              <p class="p-blogTitle__text" lang="en">Blog title</p>
+              <p class="p-blogTitle__text" lang="en">NKTech</p>
             </a>
           </h1>
         </div>

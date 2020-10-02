@@ -10,6 +10,11 @@
   width: $content-width;
   height: 100%;
 
+  // @include mq(lap) {
+  //   max-width: 80%;
+  // }
+
+
   &.-slim {
     max-width: $slim-content-width;
   }

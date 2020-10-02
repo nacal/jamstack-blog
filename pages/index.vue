@@ -7,6 +7,7 @@
       :slug="post.fields.slug"
       :headerImage="post.fields.headerImage"
       :publishedAt="post.fields.publishedAt"
+      :tag="post.fields.tag.fields.tag"
     />
   </section>
 </template>

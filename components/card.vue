@@ -1,39 +1,27 @@
 <template>
-  <article class="card p-posts__item">
-    <nuxt-link v-bind:to="{ name: 'blog-slug', params: { slug: slug }}" class="wrapper">
-      <img class="card_image" v-bind:src="headerImage.fields.file.url" />
-      <h1 class="card_title">{{ title }}</h1>
-      <p class="card_date">{{ (new Date(publishedAt)).toLocaleDateString() }}</p>
+  <article class="p-posts__item p-post">
+    <nuxt-link
+      v-bind:to="{ name: 'blog-slug', params: { slug: slug } }"
+      class="wrapper"
+    >
+      <figure class="p-post__figure">
+        <img class="p-post__image" v-bind:src="headerImage.fields.file.url" />
+      </figure>
+      <div class="p-post__text c-flex -fxd-c -jc-sb">
+        <h1 class="p-post__title">{{ title }}</h1>
+        <div class="p-post__data c-flex -jc-sb">
+          <p class="p-post__tag">{{ tag }}</p>
+          <p class="p-post__date">
+            {{ new Date(publishedAt).toLocaleDateString() }}
+          </p>
+        </div>
+      </div>
     </nuxt-link>
   </article>
 </template>
 
 <script>
 export default {
-  props: ["title", "slug", "headerImage", "publishedAt"],
+  props: ["title", "slug", "headerImage", "publishedAt", "tag"],
 };
 </script>
-
-<style scoped>
-.card {
-  padding: 10px 20px;
-  max-width: 100%;
-  border: .5px solid rgb(57, 72, 85);
-  text-align: center;
-}
-.wrapper {
-  text-decoration: none;
-}
-.card_title {
-  font-size: 1.2rem;
-}
-.card_date {
-  color: rgb(57, 72, 85);
-  text-align: right;
-  font-size: .7rem;
-}
-.card_image {
-  max-width: 100%;
-}
-
-</style>

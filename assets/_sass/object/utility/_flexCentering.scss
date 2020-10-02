@@ -1,0 +1,11 @@
+@charset 'UTF-8';
+//====================================
+//  Flex Centering
+//====================================
+
+.u-flexCentering {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}

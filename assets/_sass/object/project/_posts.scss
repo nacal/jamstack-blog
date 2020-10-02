@@ -5,13 +5,12 @@
 
 .p-posts {
   display: grid;
+  max-width: 100%;
 
-  gap: 32px 64px;
+  gap: 64px 32px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
   &__item {
-    margin: 0 auto;
-    padding: 15px;
-    text-align: center;
+    max-width: 100%;
   }
 }
