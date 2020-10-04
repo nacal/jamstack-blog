@@ -24,22 +24,28 @@ $breakpoints: (
 //====================================
 
 // ベースカラー
-$base-color: #dcdcdc;
+$base-color: #212121;
 
 // メインカラー
-$main-color: #fefefe;
+$main-color: #00aca3;
 
 // サブカラー
-$sub-color: #343434;
+$sub-color: #aa1a1a;
 
 //　アクセントカラー
 $accent-color: #000;
 
-// テキストの色
+//　タグカラー
+$tag-color: #454545;
+
+// テキストカラー
 $primary-text-color: #010101;
 
 // セカンダリーカラー
 $secondary-text-color: #fefefe;
+
+// テキストエリアカラー
+$text-area-color: #fefefe;
 
 // 補足などの色
 $hint-text-color: $md-blue-grey-300;
