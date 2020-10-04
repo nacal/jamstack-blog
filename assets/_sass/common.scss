@@ -14,7 +14,6 @@
   2.0 - Layout
 ===================================================== */
 @import 'layout/container';
-@import 'layout/body';
 @import 'layout/header';
 @import 'layout/main';
 @import 'layout/footer';
@@ -34,10 +33,10 @@
   3.2 - Project
 -----------------------------------------------------*/
 @import 'object/project/header';
-@import 'object/project/blogTitle';
 @import 'object/project/posts';
 @import 'object/project/post';
 @import 'object/project/footer';
+@import 'object/project/body';
 
 /*
   3.2 - Utility
@@ -45,8 +44,6 @@
 @import 'object/utility/margin';
 @import 'object/utility/screenReaderText';
 @import 'object/utility/uppercase';
-@import 'object/utility/en';
-@import 'object/utility/alignCenter';
 @import 'object/utility/centering';
 @import 'object/utility/wrapper';
 @import 'object/utility/flexCentering';

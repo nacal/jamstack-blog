@@ -21,7 +21,7 @@
       margin-top: .5rem;
       width: 100%;
       height: 100%;
-      background-color: $main-color;
+      background-color: $text-area-color;
       content: '';
       transition: .5s all ease-out 0s;
 
@@ -38,7 +38,7 @@
   &__text {
     margin-top: -1px;
     padding: 1rem .5rem .5rem;
-    background-color: $main-color;
+    background-color: $text-area-color;
     transition: .5s all ease-out 0s;
   }
 
@@ -55,7 +55,7 @@
 
   &__tag {
     padding: .2rem .4rem;
-    background-color: $sub-color;
+    background-color: $tag-color;
     color: $secondary-text-color;
   }
 

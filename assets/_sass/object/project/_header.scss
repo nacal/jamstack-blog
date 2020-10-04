@@ -6,11 +6,17 @@
 .p-header {
   position: relative;
   height: 100%;
+  background-color: $main-color;
+
+  clip-path: polygon(19.1vw 0, 100% 0, 100% calc(100% - 10vw), calc(100% - 19.1vw) 100%, 0 100%, 0 10vw);
+  @include mq(tab) {
+    clip-path: polygon(9.55vw 0, 100% 0, 100% calc(100% - 5vw), calc(100% - 9.55vw) 100%, 0 100%, 0 5vw);
+  }
 
   &__title {
     margin: 0 auto;
+    max-width: 75%;
     width: 240px;
-    height: 100%;
     text-align: center;
     line-height: 4rem;
   }
