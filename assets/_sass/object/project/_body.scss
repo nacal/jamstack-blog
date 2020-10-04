@@ -3,8 +3,8 @@
   Body
 -----------------------------------------------------*/
 
-.l-body {
-  &::after {
+.p-body {
+  &::before {
     position: absolute;
     top: 0;
     right: 0;
@@ -17,6 +17,6 @@
     content: '';
     transition: .5s all ease-out 0s;
 
-    clip-path: polygon(0 0, 19.1vw 0vw, 0 10vw);
+    clip-path: polygon(0 -10vw, 19.1vw 0vw, 0 10vw);
   }
 }

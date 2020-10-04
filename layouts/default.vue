@@ -1,5 +1,5 @@
 <template>
-  <div class="l-body">
+  <div class="p-body">
     <header class="l-header">
       <div class="p-header">
         <div class="l-container">
