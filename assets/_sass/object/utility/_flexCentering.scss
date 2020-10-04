@@ -6,6 +6,16 @@
 .u-flexCentering {
   display: flex;
 
-  justify-content: center;
-  align-items: center;
+  &.-tb {
+    align-items: center;
+  }
+
+  &.-lr {
+    justify-content: center;
+  }
+
+  &.-fd {
+    justify-content: center;
+    align-items: center;
+  }
 }
