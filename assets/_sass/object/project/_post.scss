@@ -31,8 +31,14 @@
 
   &__image {
     max-width: 100%;
+    transition: .5s all ease-out 0s;
 
     clip-path: polygon(20% 0, 100% 0, 100% 80%, 80% 100%, 0 100%, 0 20%);
+
+    &:hover {
+      filter: brightness(80%);
+      transition: .5s all ease-out 0s;
+    }
   }
 
   &__text {
@@ -46,7 +52,6 @@
   &__title {
     padding-bottom: 1rem;
     height: 6rem;
-    font-weight: 700;
   }
 
   &__data {
