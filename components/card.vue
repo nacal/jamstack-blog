@@ -1,10 +1,10 @@
 <template>
   <article class="p-posts__item p-post">
-    <nuxt-link v-bind:to="{ name: 'blog-slug', params: { slug: slug } }">
-      <figure class="p-post__figure">
+    <figure class="p-post__figure">
+      <nuxt-link v-bind:to="{ name: 'blog-slug', params: { slug: slug } }">
         <img class="p-post__image" v-bind:src="headerImage.fields.file.url" />
-      </figure>
-    </nuxt-link>
+      </nuxt-link>
+    </figure>
     <div class="p-post__text c-flex -fxd-c -jc-sb">
       <div class="p-post__title p-postTitle">
         <h1 class="p-postTitle__text">
@@ -17,7 +17,7 @@
       </div>
       <div class="p-post__data c-flex -jc-sb">
         <p class="p-post__tag">{{ tag }}</p>
-        <p class="p-post__date">
+        <p lang="en" class="p-post__date">
           <time :datetime="publishedAt">{{
             new Date(publishedAt).toLocaleDateString()
           }}</time>

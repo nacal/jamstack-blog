@@ -54,18 +54,19 @@
     height: 6rem;
   }
 
-  &__data {
-    font-size: .8rem;
-  }
-
   &__tag {
     padding: .2rem .4rem;
     background-color: $tag-color;
     color: $secondary-text-color;
+    font-size: .8rem;
   }
 
   &__date {
     align-self: center;
+
+    &.-slug {
+      color: $sub-color;
+    }
   }
 
   &:hover {
