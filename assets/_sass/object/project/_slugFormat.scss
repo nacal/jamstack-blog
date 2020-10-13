@@ -5,19 +5,27 @@
 
 .p-slugFormat {
   h2 {
-    margin: 3em 0 .5em;
+    margin: 1.5em 0 .5em;
     padding-bottom: .25em 0;
     border-bottom: solid 3px $main-color;
     font-weight: bold;
     font-size: 2rem;
+
+    @include mq(tab) {
+      margin-top: 3em;
+    }
   }
 
   h3 {
-    margin: 2em 0 .5em;
+    margin: 1.5em 0 .5em;
     padding-left: .5em;
     border-left: solid 5px $main-color;
     font-weight: bold;
     font-size: 1.5rem;
+
+    @include mq(tab) {
+      margin-top: 2em;
+    }
   }
 
   h4 {
@@ -27,6 +35,11 @@
   }
 
   p {
-    line-height: 2em;
+    margin-bottom: 1em;
+    line-height: 1.5em;
+
+    @include mq(tab) {
+      line-height: 2em;
+    }
   }
 }
