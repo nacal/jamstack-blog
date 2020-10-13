@@ -1,0 +1,42 @@
+@charset 'UTF-8';
+/*
+  Slug
+-----------------------------------------------------*/
+
+.p-slug {
+  margin: 0 auto;
+  max-width: 800px;
+
+  &__title {
+    margin-bottom: 1rem;
+    color: $sub-color;
+    font-weight: bold;
+    font-size: 1.5rem;
+
+    @include mq(tab) {
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+  }
+
+  &__data {
+    margin-bottom: .5rem;
+
+    @include mq(tab) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__text {
+    padding: 3rem 1rem;
+    background-color: $sub-color;
+  }
+
+  &__image {
+    margin-bottom: 1.5rem;
+
+    @include mq(tab) {
+      margin-bottom: 3rem;
+    }
+  }
+}

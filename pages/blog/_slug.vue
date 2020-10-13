@@ -1,9 +1,22 @@
 <template>
-  <section class="slug">
-    <h1 class="slug_title">{{ post.fields.title }}</h1>
-    <p class="slug_date">{{ (new Date(post.fields.publishedAt)).toLocaleDateString() }}</p>
-    <img class="slug_image" v-bind:src="post.fields.headerImage.fields.file.url" />
-    <div v-html="$md.render(post.fields.body)"></div>
+  <section class="p-slug">
+    <h1 class="p-slug__title">{{ post.fields.title }}</h1>
+    <div class="p-slug__data p-post__data c-flex -jc-sb">
+      <p class="p-post__tag">{{ post.fields.tag.fields.tag }}</p>
+      <p lang="en" class="p-post__date -slug">
+        <time :datetime="post.fields.publishedAt">{{
+          new Date(post.fields.publishedAt).toLocaleDateString()
+        }}</time>
+      </p>
+    </div>
+    <img
+      class="p-slug__image"
+      v-bind:src="post.fields.headerImage.fields.file.url"
+    />
+    <div
+      v-html="$md.render(post.fields.body)"
+      class="p-slug__text p-slugFormat"
+    ></div>
   </section>
 </template>
 

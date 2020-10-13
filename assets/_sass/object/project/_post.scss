@@ -31,8 +31,14 @@
 
   &__image {
     max-width: 100%;
+    transition: .5s all ease-out 0s;
 
     clip-path: polygon(20% 0, 100% 0, 100% 80%, 80% 100%, 0 100%, 0 20%);
+
+    &:hover {
+      filter: brightness(80%);
+      transition: .5s all ease-out 0s;
+    }
   }
 
   &__text {
@@ -46,21 +52,21 @@
   &__title {
     padding-bottom: 1rem;
     height: 6rem;
-    font-weight: 700;
-  }
-
-  &__data {
-    font-size: .8rem;
   }
 
   &__tag {
     padding: .2rem .4rem;
     background-color: $tag-color;
     color: $secondary-text-color;
+    font-size: .8rem;
   }
 
   &__date {
     align-self: center;
+
+    &.-slug {
+      color: $sub-color;
+    }
   }
 
   &:hover {

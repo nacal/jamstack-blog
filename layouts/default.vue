@@ -4,9 +4,8 @@
       <div class="p-header">
         <div class="l-container u-flexCentering -tb">
           <h1 class="p-header__title">
-            <!-- <span class="u-screenReaderText" lang="en">Blog title</span> -->
             <span class="u-screenReaderText" lang="en">NKTech</span>
-            <a href="./" class="c-logo c-logo--primary">
+            <nuxt-link to="/" class="c-logo c-logo--primary">
               <img
                 src="../assets/images/common/logo-primary.png"
                 srcset="
@@ -15,7 +14,7 @@
                 "
                 alt="NKTech"
               />
-            </a>
+            </nuxt-link>
           </h1>
         </div>
         <!-- /.l-container -->

@@ -1,22 +1,29 @@
 <template>
   <article class="p-posts__item p-post">
-    <nuxt-link
-      v-bind:to="{ name: 'blog-slug', params: { slug: slug } }"
-      class="wrapper"
-    >
-      <figure class="p-post__figure">
+    <figure class="p-post__figure">
+      <nuxt-link v-bind:to="{ name: 'blog-slug', params: { slug: slug } }">
         <img class="p-post__image" v-bind:src="headerImage.fields.file.url" />
-      </figure>
-      <div class="p-post__text c-flex -fxd-c -jc-sb">
-        <h1 class="p-post__title">{{ title }}</h1>
-        <div class="p-post__data c-flex -jc-sb">
-          <p class="p-post__tag">{{ tag }}</p>
-          <p class="p-post__date">
-            {{ new Date(publishedAt).toLocaleDateString() }}
-          </p>
-        </div>
+      </nuxt-link>
+    </figure>
+    <div class="p-post__text c-flex -fxd-c -jc-sb">
+      <div class="p-post__title p-postTitle">
+        <h1 class="p-postTitle__text">
+          <nuxt-link
+            v-bind:to="{ name: 'blog-slug', params: { slug: slug } }"
+            class="p-postTitle__link"
+            >{{ title }}
+          </nuxt-link>
+        </h1>
       </div>
-    </nuxt-link>
+      <div class="p-post__data c-flex -jc-sb">
+        <p class="p-post__tag">{{ tag }}</p>
+        <p lang="en" class="p-post__date">
+          <time :datetime="publishedAt">{{
+            new Date(publishedAt).toLocaleDateString()
+          }}</time>
+        </p>
+      </div>
+    </div>
   </article>
 </template>
 
