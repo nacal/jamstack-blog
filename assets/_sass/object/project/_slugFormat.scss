@@ -9,10 +9,11 @@
     padding-bottom: .25em 0;
     border-bottom: solid 3px $main-color;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.5rem;
 
     @include mq(tab) {
       margin-top: 3em;
+      font-size: 2rem;
     }
   }
 
@@ -21,17 +22,21 @@
     padding-left: .5em;
     border-left: solid 5px $main-color;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 
     @include mq(tab) {
       margin-top: 2em;
+      font-size: 1.5rem;
     }
   }
 
   h4 {
     margin: 1em 0 0;
     font-weight: bold;
-    font-size: 1.25rem;
+
+    @include mq(tab) {
+      font-size: 1.25rem;
+    }
   }
 
   p {

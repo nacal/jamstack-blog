@@ -9,7 +9,7 @@
 
   &__title {
     position: relative;
-    margin-bottom: 1rem;
+    margin-bottom: .75rem;
     color: $sub-color;
     font-weight: bold;
     font-size: 1.5rem;
@@ -33,7 +33,7 @@
     margin-bottom: .5rem;
 
     @include mq(tab) {
-      margin-bottom: 1rem;
+      margin-bottom: .75rem;
     }
   }
 
