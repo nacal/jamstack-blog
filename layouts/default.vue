@@ -2,7 +2,7 @@
   <div class="p-body">
     <header class="l-header">
       <div class="p-header">
-        <div class="l-container u-flexCentering -tb">
+        <div class="l-container u-flexCentering -fd c-flex -fxd-c">
           <h1 class="p-header__title">
             <span class="u-screenReaderText" lang="en">NKTech</span>
             <nuxt-link to="/" class="c-logo c-logo--primary">
@@ -16,6 +16,9 @@
               />
             </nuxt-link>
           </h1>
+          <h2 class="p-header__copy">
+            アウトプットをコツコツ積み上げるTechブログ
+          </h2>
         </div>
         <!-- /.l-container -->
       </div>
