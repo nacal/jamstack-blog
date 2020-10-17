@@ -73,11 +73,14 @@ module.exports = {
     typography: true,  // 言語に依存しないきれいな 置換 + 引用符 を有効にします。
   },
   generate: {
+    fallback: true,
     routes() {
       return cdaClient
-        .getEntries(ctfConfig.CTF_BLOG_POST_TYPE_ID)
+        .getEntries({ content_type: 'blogPost' })
         .then(entries => {
-          return [...entries.items.map(entry => `/blog/${entry.fields.slug}`)]
+          return [...entries.items.map(entry =>
+            `/${entry.fields.tag.fields.tagSlug}/${entry.fields.slug}`
+          )]
         })
     }
   },
