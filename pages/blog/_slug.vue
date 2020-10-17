@@ -23,6 +23,7 @@
 
 <script>
 import { createClient } from "~/plugins/contentful.js";
+import Prism from "~/plugins/prism";
 
 const client = createClient();
 export default {
@@ -87,6 +88,9 @@ export default {
         { hid: "twitter:site", name: "twitter:site", content: "@nkthkr_" },
       ],
     };
+  },
+  mounted() {
+    Prism.highlightAll();
   },
 };
 </script>
