@@ -8,14 +8,24 @@
   max-width: 800px;
 
   &__title {
-    margin-bottom: 1rem;
+    position: relative;
+    margin-bottom: .75rem;
     color: $sub-color;
     font-weight: bold;
     font-size: 1.5rem;
 
     @include mq(tab) {
-      margin-bottom: 2rem;
       font-size: 2rem;
+    }
+
+    &::after {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      display: block;
+      width: 100%;
+      border-top: 4px solid $main-color;
+      content: '';
     }
   }
 
@@ -23,13 +33,32 @@
     margin-bottom: .5rem;
 
     @include mq(tab) {
-      margin-bottom: 1rem;
+      margin-bottom: .75rem;
     }
   }
 
   &__text {
+    position: relative;
     padding: 3rem 1rem;
     background-color: $sub-color;
+
+    &::before,
+    &::after {
+      position: absolute;
+      left: 0;
+      display: block;
+      width: 100%;
+      border-top: 16px solid $main-color;
+      content: '';
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      top: 100%;
+    }
   }
 
   &__image {

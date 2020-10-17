@@ -14,10 +14,19 @@
   }
 
   &__title {
-    margin: 0 auto;
+    margin: 0 auto .5rem;
     max-width: 75%;
     width: 240px;
     text-align: center;
     line-height: 4rem;
+  }
+
+  &__copy {
+    font-weight: bold;
+    font-size: .8rem;
+
+    @include mq(tab) {
+      font-size: 1rem;
+    }
   }
 }

@@ -1,15 +1,19 @@
 <template>
   <article class="p-posts__item p-post">
     <figure class="p-post__figure">
-      <nuxt-link v-bind:to="{ name: 'blog-slug', params: { slug: slug } }">
-        <img class="p-post__image" v-bind:src="headerImage.fields.file.url" />
+      <nuxt-link :to="{ name: 'blog-slug', params: { slug: slug } }">
+        <img
+          class="p-post__image"
+          :src="headerImage.fields.file.url"
+          :alt="headerImage.fields.description"
+        />
       </nuxt-link>
     </figure>
     <div class="p-post__text c-flex -fxd-c -jc-sb">
       <div class="p-post__title p-postTitle">
         <h1 class="p-postTitle__text">
           <nuxt-link
-            v-bind:to="{ name: 'blog-slug', params: { slug: slug } }"
+            :to="{ name: 'blog-slug', params: { slug: slug } }"
             class="p-postTitle__link"
             >{{ title }}
           </nuxt-link>
