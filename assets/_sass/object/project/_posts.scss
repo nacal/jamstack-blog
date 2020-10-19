@@ -9,6 +9,12 @@
 
   gap: 64px 32px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  @include mq(tab) {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+  }
+  @include mq(lap) {
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+  }
 
   &__item {
     max-width: 100%;

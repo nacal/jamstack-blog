@@ -99,4 +99,15 @@
   code {
     color: #fff;
   }
+
+  a {
+    display: inline;
+    color: $main-color;
+    &:hover {
+      text-decoration: underline;
+    }
+    &:visited {
+      color: $visited-text-color;
+    }
+  }
 }

@@ -8,6 +8,7 @@ const ctfConfig = getConfigForKeys([
 
 const { createClient } = require('./plugins/contentful')
 const cdaClient = createClient(ctfConfig)
+const client = require('./plugins/contentful').default
 
 module.exports = {
   /*
@@ -90,7 +91,8 @@ module.exports = {
     { src: '~/assets/_sass/common.scss', lang: 'scss' },
   ],
   modules: [
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
+    'nuxt-fontawesome',
   ],
 
   markdownit: {
@@ -119,6 +121,10 @@ module.exports = {
   },
   plugins: [
     '~/plugins/prism',
-  ]
+  ],
+
+  fontawesome: {
+    component: 'fa'
+  },
 
 }
