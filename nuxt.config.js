@@ -19,6 +19,34 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'アウトプットをコツコツ積み上げるTechブログ' },
+      { hid: "og:type", property: "og:type", content: "website" },
+      {
+        hid: "og:url",
+        property: "og:url",
+        content:
+          "https://nktech.jp"
+      },
+      {
+        hid: "og:title",
+        property: "og:title",
+        content: 'NKTech',
+      },
+      {
+        hid: "og:description",
+        property: "og:description",
+        content: 'アウトプットをコツコツ積み上げるTechブログ',
+      },
+      {
+        hid: "og:image",
+        property: "og:image",
+        content: "https://nktech.jp/cardImage.jpg",
+      },
+      {
+        hid: "twitter:card",
+        name: "twitter:card",
+        content: "summary",
+      },
+      { hid: "twitter:site", name: "twitter:site", content: "@nkthkr_" },
 
 
     ],
