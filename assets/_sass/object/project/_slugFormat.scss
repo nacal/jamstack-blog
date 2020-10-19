@@ -51,7 +51,8 @@
   }
 
   ul,
-  ol {
+  ol,
+  pre {
     margin-bottom: 1em;
   }
 
@@ -85,7 +86,17 @@
     font-weight: bold;
   }
 
+  pre {
+    padding: 1em;
+    background-color: $code-block-color;
+  }
+
+
+  pre[class*='language-'] {
+    margin: 1em 0;
+  }
+
   code {
-    font-family: monospace;
+    color: #fff;
   }
 }

@@ -23,6 +23,7 @@
 
 <script>
 import { createClient } from "~/plugins/contentful.js";
+import Prism from "~/plugins/prism";
 
 const client = createClient();
 export default {
@@ -42,7 +43,7 @@ export default {
   },
   head() {
     return {
-      title: this.post.fields.title,
+      title: this.post.fields.title + " - NKTech",
       meta: [
         {
           hid: "description",
@@ -59,7 +60,9 @@ export default {
           hid: "og:url",
           property: "og:url",
           content:
-            "https://quizzical-pare-e9bb41.netlify.app/blog/" +
+            "https://nktech.jp/" +
+            this.post.fields.tag.fields.tagSlug +
+            "/" +
             this.post.fields.slug,
         },
         {
@@ -77,10 +80,17 @@ export default {
           property: "og:image",
           content: "https:" + this.post.fields.headerImage.fields.file.url,
         },
-        { hid: "twitter:card", name: "twitter:card", content: "summary" },
+        {
+          hid: "twitter:card",
+          name: "twitter:card",
+          content: "summary_large_image",
+        },
         { hid: "twitter:site", name: "twitter:site", content: "@nkthkr_" },
       ],
     };
+  },
+  mounted() {
+    Prism.highlightAll();
   },
 };
 </script>

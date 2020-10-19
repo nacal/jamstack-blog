@@ -31,10 +31,6 @@
 
   &__data {
     margin-bottom: .5rem;
-
-    @include mq(tab) {
-      margin-bottom: .75rem;
-    }
   }
 
   &__text {

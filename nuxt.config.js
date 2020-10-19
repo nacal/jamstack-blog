@@ -19,6 +19,34 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'アウトプットをコツコツ積み上げるTechブログ' },
+      { hid: "og:type", property: "og:type", content: "website" },
+      {
+        hid: "og:url",
+        property: "og:url",
+        content:
+          "https://nktech.jp"
+      },
+      {
+        hid: "og:title",
+        property: "og:title",
+        content: 'NKTech',
+      },
+      {
+        hid: "og:description",
+        property: "og:description",
+        content: 'アウトプットをコツコツ積み上げるTechブログ',
+      },
+      {
+        hid: "og:image",
+        property: "og:image",
+        content: "https://nktech.jp/cardImage.jpg",
+      },
+      {
+        hid: "twitter:card",
+        name: "twitter:card",
+        content: "summary",
+      },
+      { hid: "twitter:site", name: "twitter:site", content: "@nkthkr_" },
 
 
     ],
@@ -73,11 +101,14 @@ module.exports = {
     typography: true,  // 言語に依存しないきれいな 置換 + 引用符 を有効にします。
   },
   generate: {
+    fallback: true,
     routes() {
       return cdaClient
-        .getEntries(ctfConfig.CTF_BLOG_POST_TYPE_ID)
+        .getEntries({ content_type: 'blogPost' })
         .then(entries => {
-          return [...entries.items.map(entry => `/blog/${entry.fields.slug}`)]
+          return [...entries.items.map(entry =>
+            `/${entry.fields.tag.fields.tagSlug}/${entry.fields.slug}`
+          )]
         })
     }
   },
@@ -85,6 +116,9 @@ module.exports = {
     CTF_SPACE_ID: ctfConfig.CTF_SPACE_ID,
     CTF_CDA_ACCESS_TOKEN: ctfConfig.CTF_CDA_ACCESS_TOKEN,
     CTF_BLOG_POST_TYPE_ID: ctfConfig.CTF_BLOG_POST_TYPE_ID
-  }
+  },
+  plugins: [
+    '~/plugins/prism',
+  ]
 
 }
