@@ -29,4 +29,14 @@
       font-size: 1rem;
     }
   }
+
+  &__sns {
+    position: absolute;
+    top: 1rem;
+    left: .5rem;
+
+    @include mq(tab) {
+      left: 0;
+    }
+  }
 }
