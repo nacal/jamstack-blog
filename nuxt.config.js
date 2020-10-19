@@ -8,7 +8,6 @@ const ctfConfig = getConfigForKeys([
 
 const { createClient } = require('./plugins/contentful')
 const cdaClient = createClient(ctfConfig)
-const client = require('./plugins/contentful').default
 
 module.exports = {
   /*
