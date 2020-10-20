@@ -1,7 +1,7 @@
 <template>
   <article class="p-posts__item p-post">
     <figure class="p-post__figure">
-      <nuxt-link :to="{ name: 'blog-slug', params: { slug: slug } }">
+      <nuxt-link :to="{ path: `/${tagSlug}/${slug}` }">
         <img
           class="p-post__image"
           :src="headerImage.fields.file.url"
@@ -13,9 +13,10 @@
       <div class="p-post__title p-postTitle">
         <h1 class="p-postTitle__text">
           <nuxt-link
-            :to="{ name: 'blog-slug', params: { slug: slug } }"
+            :to="{ path: `/${tagSlug}/${slug}` }"
             class="p-postTitle__link"
-            >{{ title }}
+          >
+            {{ title }}
           </nuxt-link>
         </h1>
       </div>
@@ -33,6 +34,6 @@
 
 <script>
 export default {
-  props: ["title", "slug", "headerImage", "publishedAt", "tag"],
+  props: ["title", "slug", "headerImage", "publishedAt", "tag", "tagSlug"],
 };
 </script>
