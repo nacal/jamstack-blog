@@ -1,7 +1,12 @@
 <template>
   <article class="p-posts__item p-post">
     <figure class="p-post__figure">
-      <nuxt-link :to="{ name: 'blog-slug', params: { slug: slug } }">
+      <nuxt-link
+        :to="{
+          name: 'blog-slug',
+          params: { slug: tag.fields.tagslug + '/' + slug },
+        }"
+      >
         <img
           class="p-post__image"
           :src="headerImage.fields.file.url"
@@ -13,7 +18,10 @@
       <div class="p-post__title p-postTitle">
         <h1 class="p-postTitle__text">
           <nuxt-link
-            :to="{ name: 'blog-slug', params: { slug: slug } }"
+            :to="{
+              name: 'blog-slug',
+              params: { slug: tag.fields.tagslug + '/' + slug },
+            }"
             class="p-postTitle__link"
             >{{ title }}
           </nuxt-link>
