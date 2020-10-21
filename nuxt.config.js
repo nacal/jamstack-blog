@@ -90,7 +90,6 @@ module.exports = {
     { src: '~/assets/_sass/common.scss', lang: 'scss' },
   ],
   modules: [
-    '@nuxtjs/markdownit',
     'nuxt-fontawesome',
   ],
 
@@ -106,15 +105,18 @@ module.exports = {
         })
     }
   },
+
   env: {
     CTF_SPACE_ID: ctfConfig.CTF_SPACE_ID,
     CTF_CDA_ACCESS_TOKEN: ctfConfig.CTF_CDA_ACCESS_TOKEN,
     CTF_BLOG_POST_TYPE_ID: ctfConfig.CTF_BLOG_POST_TYPE_ID
   },
+
   plugins: [
     '~/plugins/contentful',
     '~/plugins/markdownit',
     '~/plugins/prism',
+    '~plugins/vue-scrollto',
   ],
 
   fontawesome: {
