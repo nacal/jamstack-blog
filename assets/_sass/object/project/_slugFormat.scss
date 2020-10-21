@@ -103,11 +103,48 @@
   a {
     display: inline;
     color: $main-color;
+
     &:hover {
       text-decoration: underline;
     }
+
     &:visited {
       color: $visited-text-color;
+    }
+  }
+
+  .table-of-contents {
+    margin: 2rem 0;
+    padding: 1rem;
+    border: 3px solid $main-color;
+    background-color: $toc-area-color;
+
+    &__header {
+      margin-bottom: 1em;
+      border-bottom: 1px solid $main-color;
+      font-weight: bold;
+      font-size: 1.25rem;
+      line-height: 2em;
+
+      @include mq(tab) {
+        font-size: 1.5rem;
+      }
+    }
+
+    ol {
+      list-style-type: decimal;
+
+      li > ol {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      color: $primary-text-color;
+
+      &:visited {
+        color: $primary-text-color;
+      }
     }
   }
 }

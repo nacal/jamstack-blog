@@ -90,17 +90,9 @@ module.exports = {
     { src: '~/assets/_sass/common.scss', lang: 'scss' },
   ],
   modules: [
-    '@nuxtjs/markdownit',
     'nuxt-fontawesome',
   ],
 
-  markdownit: {
-    injected: true, // $mdを利用してmarkdownをhtmlにレンダリングする
-    breaks: true, // 改行コードを<br>に変換する
-    html: true, // HTML タグを有効にする
-    linkify: true, // URLに似たテキストをリンクに自動変換する
-    typography: true,  // 言語に依存しないきれいな 置換 + 引用符 を有効にします。
-  },
   generate: {
     fallback: true,
     routes() {
@@ -113,12 +105,16 @@ module.exports = {
         })
     }
   },
+
   env: {
     CTF_SPACE_ID: ctfConfig.CTF_SPACE_ID,
     CTF_CDA_ACCESS_TOKEN: ctfConfig.CTF_CDA_ACCESS_TOKEN,
     CTF_BLOG_POST_TYPE_ID: ctfConfig.CTF_BLOG_POST_TYPE_ID
   },
+
   plugins: [
+    '~/plugins/contentful',
+    '~/plugins/markdownit',
     '~/plugins/prism',
   ],
 

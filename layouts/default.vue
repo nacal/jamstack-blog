@@ -59,3 +59,19 @@ export default {
   },
 };
 </script>
+
+<style>
+.page-enter-active,
+.page-leave-active {
+  transition: .5s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
+.page-enter {
+  transform: translateY(15px);
+}
+
+</style>
