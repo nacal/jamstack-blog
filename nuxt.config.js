@@ -116,7 +116,6 @@ module.exports = {
     '~/plugins/contentful',
     '~/plugins/markdownit',
     '~/plugins/prism',
-    '~plugins/vue-scrollto',
   ],
 
   fontawesome: {
