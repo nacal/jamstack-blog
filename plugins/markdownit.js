@@ -1,5 +1,7 @@
 import MarkdownIt from 'markdown-it'
 import markdownItAnchor from 'markdown-it-anchor'
+import markdownItLinkAttributes from 'markdown-it-link-attributes'
+import markdownItTocDoneRight from 'markdown-it-toc-done-right'
 
 export default ({ app }, inject) => {
 
@@ -15,10 +17,10 @@ export default ({ app }, inject) => {
     return self.renderToken(tokens, idx, options)
   }
   md.use(markdownItAnchor)
-  md.use(require("markdown-it-link-attributes"), {
+  md.use(markdownItLinkAttributes, {
     attrs: { target: '_blank', rel: 'noopener' }
   })
-  md.use(require("markdown-it-toc-done-right"), {
+  md.use(markdownItTocDoneRight, {
     level: 2
   })
   md.renderer.rules.link_open = function (tokens, idx, options, env, self) {
