@@ -27,7 +27,7 @@ import Prism from "~/plugins/prism";
 
 const client = createClient();
 export default {
-  transition: "page",
+  transition: "slug",
   async asyncData({ env, params }) {
     return await client
       .getEntries({
