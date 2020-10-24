@@ -61,16 +61,16 @@ export default {
 </script>
 
 <style>
-.page-enter-active,
-.page-leave-active {
-  transition: .5s;
+.slug-enter-active,
+.slug-leave-active {
+  transition: all .5s ease-out;
 }
-.page-enter,
-.page-leave-to {
+.slug-enter,
+.slug-leave-to {
   opacity: 0;
 }
 
-.page-enter {
+.slug-enter {
   transform: translateY(15px);
 }
 
