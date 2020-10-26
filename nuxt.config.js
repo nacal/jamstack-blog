@@ -116,6 +116,7 @@ module.exports = {
     '~/plugins/contentful',
     '~/plugins/markdownit',
     '~/plugins/prism',
+    { src: '~plugins/ga.js', mode: 'client' }
   ],
 
   fontawesome: {
