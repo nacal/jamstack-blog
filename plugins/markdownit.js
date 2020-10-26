@@ -2,6 +2,7 @@ import MarkdownIt from 'markdown-it'
 import markdownItAnchor from 'markdown-it-anchor'
 import markdownItLinkAttributes from 'markdown-it-link-attributes'
 import markdownItTocDoneRight from 'markdown-it-toc-done-right'
+import markdownItReplaceElement from 'markdown-it-replace-element'
 
 export default ({ app }, inject) => {
 
@@ -21,8 +22,12 @@ export default ({ app }, inject) => {
     attrs: { target: '_blank', rel: 'noopener' }
   })
   md.use(markdownItTocDoneRight, {
-    level: 2
+    level: 2,
+    linkClass: 'table-of-contents__link'
   })
+  // md.use(markdownItReplaceElement, {
+  //   strong: 'em'
+  // })
   md.renderer.rules.link_open = function (tokens, idx, options, env, self) {
     const aIndex = tokens[idx].attrIndex('target')
     if (tokens[idx]['attrs'][0][1].match('http')) {
