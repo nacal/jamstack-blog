@@ -22,7 +22,7 @@
       </div>
       <div class="p-post__data c-flex -jc-sb">
         <p class="p-post__tag">
-          <nuxt-link :to="{ path: `/${tagSlug}` }" class="p-postTitle__link">
+          <nuxt-link :to="{ path: `/${tagSlug}` }" class="c-tag">
             {{ tag }}
           </nuxt-link>
         </p>
@@ -38,6 +38,6 @@
 
 <script>
 export default {
-  props: ["title", "slug", "headerImage", "publishedAt", "tag", "tagSlug"],
+  props: ["title", "slug", "headerImage", "publishedAt", "tag", "tagSlug"]
 };
 </script>
