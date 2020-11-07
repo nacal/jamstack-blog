@@ -4,9 +4,11 @@
 -----------------------------------------------------*/
 
 .p-slugFormat {
+  word-break: break-all;
+
   h2 {
-    margin: 1.5em 0 .5em;
-    padding-bottom: .25em 0;
+    margin: 1.5em 0 0.5em;
+    padding-bottom: 0.25em 0;
     border-bottom: solid 3px $main-color;
     font-weight: bold;
     font-size: 1.5rem;
@@ -18,8 +20,8 @@
   }
 
   h3 {
-    margin: 1.5em 0 .5em;
-    padding-left: .5em;
+    margin: 1.5em 0 0.5em;
+    padding-left: 0.5em;
     border-left: solid 5px $main-color;
     font-weight: bold;
     font-size: 1.25rem;
@@ -41,7 +43,7 @@
   }
 
   h5 {
-    margin: .5em 0 0;
+    margin: 0.5em 0 0;
     font-weight: bold;
   }
 
@@ -65,10 +67,10 @@
       &::before {
         display: inline-block;
         margin: 0 8px 4px 0;
-        width: .8em;
-        height: .2em;
+        width: 0.8em;
+        height: 0.2em;
         background: $main-color;
-        content: '';
+        content: "";
         vertical-align: middle;
       }
     }
@@ -78,7 +80,7 @@
     list-style-type: decimal;
     li {
       margin-left: 1em;
-      padding-left: .25em;
+      padding-left: 0.25em;
     }
   }
 
@@ -91,8 +93,7 @@
     background-color: $code-block-color;
   }
 
-
-  pre[class*='language-'] {
+  pre[class*="language-"] {
     margin: 1em 0;
   }
 
