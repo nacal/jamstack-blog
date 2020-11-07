@@ -21,7 +21,11 @@
         </h1>
       </div>
       <div class="p-post__data c-flex -jc-sb">
-        <p class="p-post__tag">{{ tag }}</p>
+        <p class="p-post__tag">
+          <nuxt-link :to="{ path: `/${tagSlug}` }" class="c-tag">
+            {{ tag }}
+          </nuxt-link>
+        </p>
         <p lang="en" class="p-post__date">
           <time :datetime="publishedAt">{{
             new Date(publishedAt).toLocaleDateString()
@@ -34,6 +38,6 @@
 
 <script>
 export default {
-  props: ["title", "slug", "headerImage", "publishedAt", "tag", "tagSlug"],
+  props: ["title", "slug", "headerImage", "publishedAt", "tag", "tagSlug"]
 };
 </script>

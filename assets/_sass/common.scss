@@ -3,20 +3,20 @@
 /* =====================================================
   1.0 - Foundation
 ===================================================== */
-@import 'foundation/setting';
-@import 'foundation/functions';
-@import 'foundation/mixin/media-query';
-@import 'foundation/mixin/fontsize';
-@import 'foundation/reset';
-@import 'foundation/base';
+@import "foundation/setting";
+@import "foundation/functions";
+@import "foundation/mixin/media-query";
+@import "foundation/mixin/fontsize";
+@import "foundation/reset";
+@import "foundation/base";
 
 /* =====================================================
   2.0 - Layout
 ===================================================== */
-@import 'layout/container';
-@import 'layout/header';
-@import 'layout/main';
-@import 'layout/footer';
+@import "layout/container";
+@import "layout/header";
+@import "layout/main";
+@import "layout/footer";
 
 /* =====================================================
   3.0 - Object
@@ -25,29 +25,30 @@
 /*
   3.1 - Component
 -----------------------------------------------------*/
-@import 'object/component/flex';
-@import 'object/component/grid';
-@import 'object/component/copyright';
+@import "object/component/flex";
+@import "object/component/grid";
+@import "object/component/copyright";
+@import "object/component/tag";
 
 /*
   3.2 - Project
 -----------------------------------------------------*/
-@import 'object/project/header';
-@import 'object/project/posts';
-@import 'object/project/post';
-@import 'object/project/postTitle';
-@import 'object/project/footer';
-@import 'object/project/body';
-@import 'object/project/slug';
-@import 'object/project/slugFormat';
-@import 'object/project/sns';
+@import "object/project/header";
+@import "object/project/posts";
+@import "object/project/post";
+@import "object/project/postTitle";
+@import "object/project/footer";
+@import "object/project/body";
+@import "object/project/slug";
+@import "object/project/slugFormat";
+@import "object/project/sns";
 
 /*
   3.2 - Utility
 -----------------------------------------------------*/
-@import 'object/utility/margin';
-@import 'object/utility/screenReaderText';
-@import 'object/utility/uppercase';
-@import 'object/utility/centering';
-@import 'object/utility/wrapper';
-@import 'object/utility/flexCentering';
+@import "object/utility/margin";
+@import "object/utility/screenReaderText";
+@import "object/utility/uppercase";
+@import "object/utility/centering";
+@import "object/utility/wrapper";
+@import "object/utility/flexCentering";

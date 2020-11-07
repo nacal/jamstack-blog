@@ -6,6 +6,7 @@
 .p-postTitle {
   &__link {
     display: inline;
+
     &:hover {
       text-decoration: underline;
     }
@@ -13,5 +14,7 @@
 
   &__text {
     font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }
