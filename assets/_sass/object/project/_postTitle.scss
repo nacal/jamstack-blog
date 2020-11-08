@@ -5,7 +5,10 @@
 
 .p-postTitle {
   &__link {
-    display: inline;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 
     &:hover {
       text-decoration: underline;
