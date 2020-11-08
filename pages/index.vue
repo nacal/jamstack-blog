@@ -1,6 +1,6 @@
 <template>
   <section class="p-posts">
-    <card
+    <Card
       v-for="post in posts"
       v-bind:key="post.fields.slug"
       :title="post.fields.title"
@@ -14,26 +14,26 @@
 </template>
 
 <script>
-import Card from "~/components/card.vue";
+import Card from "~/components/Card.vue";
 import { createClient } from "~/plugins/contentful.js";
 
 const client = createClient();
 export default {
   components: {
-    Card,
+    Card
   },
   async asyncData({ env, params }) {
     return await client
       .getEntries({
         content_type: env.CTF_BLOG_POST_TYPE_ID,
-        order: "-fields.publishedAt",
+        order: "-fields.publishedAt"
       })
-      .then((entries) => {
+      .then(entries => {
         return {
-          posts: entries.items,
+          posts: entries.items
         };
       })
       .catch(console.error);
-  },
+  }
 };
 </script>
