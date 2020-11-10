@@ -1,7 +1,8 @@
 <template>
   <div>
     <transition name="button">
-      <button v-show="buttonActive" @click="returnTop">
+      <button v-show="buttonActive" @click="returnTop" class="p-returnTop">
+        <fa :icon="faAngleUp" class="p-returnTop__icon" />
         <span class="u-screenReaderText">Topへ戻る</span>
       </button>
     </transition>
@@ -10,6 +11,7 @@
 
 <script>
 import Vue from "vue";
+import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 
 export default Vue.extend({
   data() {
@@ -37,6 +39,11 @@ export default Vue.extend({
         this.buttonActive = false;
       }
     }
+  },
+  computed: {
+    faAngleUp() {
+      return faAngleUp;
+    }
   }
 });
 </script>
@@ -49,22 +56,5 @@ export default Vue.extend({
 .button-enter,
 .button-leave-to {
   opacity: 0;
-}
-
-button {
-  position: fixed;
-  right: 14px;
-  bottom: 14px;
-  width: 32px;
-  height: 32px;
-  line-height: 32px;
-  text-align: center;
-  border-radius: 50%;
-  background: #5bc8ac;
-  appearance: none;
-  cursor: pointer;
-  border-style: outset;
-  // border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-  // border-image: initial;
 }
 </style>
