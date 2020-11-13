@@ -1,10 +1,11 @@
 # nuxt-blog
 
-> Nuxt.js + Contentful + Netlify  SPA blog project
+> Nuxt.js + Contentful + Netlify SPA blog project
+> [NKTech](https://nktech.jp/)
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ yarn install
 
