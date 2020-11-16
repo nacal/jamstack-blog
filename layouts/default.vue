@@ -42,28 +42,33 @@
         </article>
       </div>
     </footer>
+    <ReturnTop />
   </div>
 </template>
 
 <script>
+import ReturnTop from "~/components/ReturnTop.vue";
 import { faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export default {
+  components: {
+    ReturnTop
+  },
   computed: {
     faTwitter() {
       return faTwitter;
     },
     faGithub() {
       return faGithub;
-    },
-  },
+    }
+  }
 };
 </script>
 
 <style>
 .slug-enter-active,
 .slug-leave-active {
-  transition: all .5s ease-out;
+  transition: all 0.5s ease-out;
 }
 .slug-enter,
 .slug-leave-to {
@@ -73,5 +78,4 @@ export default {
 .slug-enter {
   transform: translateY(15px);
 }
-
 </style>
