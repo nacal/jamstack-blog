@@ -1,6 +1,5 @@
 @charset 'UTF-8';
-@import 'color-book';
-
+@import "color-book";
 
 // -----------------------------------
 //  Layout Settings
@@ -12,12 +11,11 @@ $slim-content-width: 960px !default;
 
 // ブレークポイント
 $breakpoints: (
-  'sp': 480px,
-  'tab': 768px,
-  'lap': 1024px,
-  'desk': 1200px,
+  "sp": 480px,
+  "tab": 768px,
+  "lap": 1024px,
+  "desk": 1200px
 ) !default;
-
 
 //====================================
 //  Color Setings
@@ -70,8 +68,10 @@ $hover-text-color: $md-cyan-300;
 //====================================
 
 //$font-set-primary : set-font-family(1) !default;
-$font-set-primary: 'Noto Sans JP', '游ゴシック' , 'Yu Gothic' , '游ゴシック体' , 'YuGothic' , 'ヒラギノ角ゴ Pro W3' , 'Hiragino Kaku Gothic Pro' , 'Meiryo UI' , 'メイリオ' , Meiryo , sans-serif;
-$font-set-en: 'Roboto', Arial, sans-serif;
+$font-set-primary: "Noto Sans JP", "游ゴシック", "Yu Gothic", "游ゴシック体",
+  "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI",
+  "メイリオ", meiryo, sans-serif;
+$font-set-en: "Roboto", arial, sans-serif;
 //  HTML用
 //  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700|Quicksand:400,700&display=swap&subset=japanese">
 

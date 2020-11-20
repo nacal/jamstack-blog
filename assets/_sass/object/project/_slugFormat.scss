@@ -1,17 +1,18 @@
 @charset 'UTF-8';
+
 /*
   Slug Format
------------------------------------------------------*/
+----------------------------------------------------- */
 
 .p-slugFormat {
   word-break: break-word;
 
   h2 {
-    margin: 1.5em 0 0.5em;
     padding-bottom: 0.25em 0;
-    border-bottom: solid 3px $main-color;
-    font-weight: bold;
+    margin: 1.5em 0 0.5em;
     font-size: 1.5rem;
+    font-weight: bold;
+    border-bottom: solid 3px $main-color;
 
     @include mq(tab) {
       margin-top: 2em;
@@ -20,11 +21,11 @@
   }
 
   h3 {
-    margin: 1.5em 0 0.5em;
     padding-left: 0.5em;
-    border-left: solid 5px $main-color;
-    font-weight: bold;
+    margin: 1.5em 0 0.5em;
     font-size: 1.25rem;
+    font-weight: bold;
+    border-left: solid 5px $main-color;
 
     @include mq(tab) {
       margin-top: 2em;
@@ -34,8 +35,8 @@
 
   h4 {
     margin: 1em 0 0;
-    font-weight: bold;
     font-size: 1.125rem;
+    font-weight: bold;
 
     @include mq(tab) {
       font-size: 1.25rem;
@@ -66,12 +67,12 @@
     li {
       &::before {
         display: inline-block;
-        margin: 0 8px 4px 0;
         width: 0.8em;
         height: 0.2em;
-        background: $main-color;
-        content: "";
+        margin: 0 8px 4px 0;
         vertical-align: middle;
+        content: "";
+        background: $main-color;
       }
     }
   }
@@ -79,8 +80,8 @@
   ol {
     list-style-type: decimal;
     li {
-      margin-left: 1em;
       padding-left: 0.25em;
+      margin-left: 1em;
     }
   }
 
@@ -115,17 +116,17 @@
   }
 
   .table-of-contents {
-    margin: 2rem 0;
     padding: 1rem;
-    border: 3px solid $main-color;
+    margin: 2rem 0;
     background-color: $toc-area-color;
+    border: 3px solid $main-color;
 
     &__header {
       margin-bottom: 1em;
-      border-bottom: 1px solid $main-color;
-      font-weight: bold;
       font-size: 1.25rem;
+      font-weight: bold;
       line-height: 2em;
+      border-bottom: 1px solid $main-color;
 
       @include mq(tab) {
         font-size: 1.5rem;

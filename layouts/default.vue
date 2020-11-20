@@ -52,7 +52,7 @@ import { faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export default {
   components: {
-    ReturnTop
+    ReturnTop,
   },
   computed: {
     faTwitter() {
@@ -60,16 +60,17 @@ export default {
     },
     faGithub() {
       return faGithub;
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style>
 .slug-enter-active,
 .slug-leave-active {
-  transition: all 0.5s ease-out;
+  transition: all .5s ease-out;
 }
+
 .slug-enter,
 .slug-leave-to {
   opacity: 0;

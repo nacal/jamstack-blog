@@ -10,18 +10,23 @@
   &--0 {
     margin-top: 0;
   }
+
   &--xsmall {
     margin-top: .5em;
   }
+
   &--small {
     margin-top: 1em;
   }
+
   &--medium {
     margin-top: 1.5em;
   }
+
   &--large {
     margin-top: 2em;
   }
+
   &--xlarge {
     margin-top: 2.5em;
   }
@@ -31,41 +36,50 @@
   &--0 {
     margin-bottom: 0;
   }
+
   &--xsmall {
     margin-bottom: .5em;
   }
+
   &--small {
     margin-bottom: 1em;
   }
+
   &--medium {
     margin-bottom: 1.5em;
   }
+
   &--large {
     margin-bottom: 2em;
   }
+
   &--xlarge {
     margin-bottom: 2.5em;
   }
 }
-
 
 @include mq(tab) {
   .u-mt--tab {
     &--0 {
       margin-top: 0;
     }
+
     &--xsmall {
       margin-top: .5em;
     }
+
     &--small {
       margin-top: 1em;
     }
+
     &--medium {
       margin-top: 1.5em;
     }
+
     &--large {
       margin-top: 2em;
     }
+
     &--xlarge {
       margin-top: 2.5em;
     }
@@ -75,18 +89,23 @@
     &--0 {
       margin-bottom: 0;
     }
+
     &--xsmall {
       margin-bottom: .5em;
     }
+
     &--small {
       margin-bottom: 1em;
     }
+
     &--medium {
       margin-bottom: 1.5em;
     }
+
     &--large {
       margin-bottom: 2em;
     }
+
     &--xlarge {
       margin-bottom: 2.5em;
     }
@@ -98,18 +117,23 @@
     &--0 {
       margin-top: 0;
     }
+
     &--xsmall {
       margin-top: .5em;
     }
+
     &--small {
       margin-top: 1em;
     }
+
     &--medium {
       margin-top: 1.5em;
     }
+
     &--large {
       margin-top: 2em;
     }
+
     &--xlarge {
       margin-top: 2.5em;
     }
@@ -119,18 +143,23 @@
     &--0 {
       margin-bottom: 0;
     }
+
     &--xsmall {
       margin-bottom: .5em;
     }
+
     &--small {
       margin-bottom: 1em;
     }
+
     &--medium {
       margin-bottom: 1.5em;
     }
+
     &--large {
       margin-bottom: 2em;
     }
+
     &--xlarge {
       margin-bottom: 2.5em;
     }
@@ -142,18 +171,23 @@
     &--0 {
       margin-top: 0;
     }
+
     &--xsmall {
       margin-top: .5em;
     }
+
     &--small {
       margin-top: 1em;
     }
+
     &--medium {
       margin-top: 1.5em;
     }
+
     &--large {
       margin-top: 2em;
     }
+
     &--xlarge {
       margin-top: 2.5em;
     }
@@ -163,18 +197,23 @@
     &--0 {
       margin-bottom: 0;
     }
+
     &--xsmall {
       margin-bottom: .5em;
     }
+
     &--small {
       margin-bottom: 1em;
     }
+
     &--medium {
       margin-bottom: 1.5em;
     }
+
     &--large {
       margin-bottom: 2em;
     }
+
     &--xlarge {
       margin-bottom: 2.5em;
     }
