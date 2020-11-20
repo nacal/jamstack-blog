@@ -1,23 +1,24 @@
 @charset 'UTF-8';
+
 /*
   Return Top
------------------------------------------------------*/
+----------------------------------------------------- */
 
 .p-returnTop {
   position: fixed;
   right: 16px;
   bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 64px;
   height: 64px;
   line-height: 64px;
   text-align: center;
-  border-radius: 50%;
-  background-color: $main-color;
   cursor: pointer;
+  background-color: $main-color;
+  border-radius: 50%;
   outline: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   @include mq(tab) {
     right: 32px;

@@ -1,18 +1,19 @@
 @charset 'UTF-8';
+
 /*
   Slug
------------------------------------------------------*/
+----------------------------------------------------- */
 
 .p-slug {
-  margin: 0 auto;
   max-width: 800px;
+  margin: 0 auto;
 
   &__title {
     position: relative;
-    margin-bottom: .75rem;
-    color: $sub-color;
-    font-weight: bold;
+    margin-bottom: 0.75rem;
     font-size: 1.5rem;
+    font-weight: bold;
+    color: $sub-color;
 
     @include mq(tab) {
       font-size: 2rem;
@@ -24,13 +25,13 @@
       left: 0;
       display: block;
       width: 100%;
+      content: "";
       border-top: 4px solid $main-color;
-      content: '';
     }
   }
 
   &__data {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 
   &__text {
@@ -44,8 +45,8 @@
       left: 0;
       display: block;
       width: 100%;
+      content: "";
       border-top: 16px solid $main-color;
-      content: '';
     }
 
     &::before {
