@@ -11,12 +11,15 @@
     &-c {
       flex-direction: column;
     }
+
     &-cr {
       flex-direction: column-reverse;
     }
+
     &-r {
       flex-direction: row;
     }
+
     &-rr {
       flex-direction: row-reverse;
     }
@@ -26,9 +29,11 @@
     &-n {
       flex-wrap: nowrap;
     }
+
     &-w {
       flex-wrap: wrap;
     }
+
     &-wr {
       flex-wrap: wrap-reverse;
     }
@@ -38,15 +43,19 @@
     &-c {
       justify-content: center;
     }
+
     &-fe {
       justify-content: flex-end;
     }
+
     &-fs {
       justify-content: flex-start;
     }
+
     &-sa {
       justify-content: space-around;
     }
+
     &-sb {
       justify-content: space-between;
     }
@@ -56,15 +65,19 @@
     &-b {
       align-items: baseline;
     }
+
     &-c {
       align-items: center;
     }
+
     &-fe {
       align-items: flex-end;
     }
+
     &-fs {
       align-items: flex-start;
     }
+
     &-s {
       align-items: stretch;
     }
@@ -74,18 +87,23 @@
     &-c {
       align-content: center;
     }
+
     &-fe {
       align-content: flex-end;
     }
+
     &-fs {
       align-content: flex-start;
     }
+
     &-s {
       align-content: stretch;
     }
+
     &-sa {
       align-content: space-around;
     }
+
     &-sb {
       align-content: space-between;
     }

@@ -7,23 +7,38 @@
 .p-header {
   position: relative;
   height: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - calc(100vw / 5.37)), 0 100%);
   background-color: $main-color;
 
-  // clip-path: polygon(19.1vw 0, 100% 0, 100% calc(100% - 10vw), calc(100% - 19.1vw) 100%, 0 100%, 0 10vw);
-  // @include mq(tab) {
-  //   clip-path: polygon(9.55vw 0, 100% 0, 100% calc(100% - 5vw), calc(100% - 9.55vw) 100%, 0 100%, 0 5vw);
-  // }
+  @include mq(wide) {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - calc(90vw / 5.37)), 10% 100%, 0 100%);
+  }
+
+  &__container {
+    @include mq(tab) {
+      align-items: flex-start;
+    }
+  }
+
+  &__hero {
+    margin-top: -3rem;
+
+    @include mq(tab) {
+      margin-top: 0;
+      transform: rotate(-9.9deg);
+    }
+  }
 
   &__title {
     width: 240px;
     max-width: 75%;
-    margin: 0 auto 0.5rem;
+    margin-bottom: .5rem;
     line-height: 4rem;
     text-align: center;
   }
 
   &__copy {
-    font-size: 0.8rem;
+    font-size: .8rem;
     font-weight: bold;
 
     @include mq(tab) {
@@ -34,7 +49,7 @@
   &__sns {
     position: absolute;
     top: 1rem;
-    left: 0.5rem;
+    left: .5rem;
 
     @include mq(tab) {
       left: 0;

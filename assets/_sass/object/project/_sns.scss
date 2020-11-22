@@ -6,15 +6,15 @@
 
 .p-sns {
   &__item {
-    transition: 0.5s all ease-out 0s;
+    transition: .5s all ease-out 0s;
 
     &:hover {
       color: $icon-hover-color;
-      transition: 0.5s all ease-out 0s;
+      transition: .5s all ease-out 0s;
     }
 
     &.-main {
-      margin-left: 0.5rem;
+      margin-left: .5rem;
       font-size: 1.5rem;
 
       @include mq(tab) {

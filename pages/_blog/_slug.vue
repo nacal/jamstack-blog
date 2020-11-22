@@ -10,21 +10,23 @@
           {{ post.fields.tag.fields.tag }}
         </nuxt-link>
       </p>
-      <p lang="en" class="p-post__date -slug">
+      <p 
+        lang="en" 
+        class="p-post__date -slug">
         <time :datetime="post.fields.publishedAt">{{
           new Date(post.fields.publishedAt).toLocaleDateString()
         }}</time>
       </p>
     </div>
     <img
-      class="p-slug__image"
       :src="post.fields.headerImage.fields.file.url"
       :alt="post.fields.headerImage.fields.description"
-    />
+      class="p-slug__image"
+    >
     <div
-      v-html="$md.render(post.fields.body)"
       class="p-slug__text p-slugFormat"
-    ></div>
+      v-html="$md.render(post.fields.body)"
+    />
   </section>
 </template>
 

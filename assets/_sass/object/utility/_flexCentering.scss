@@ -6,16 +6,33 @@
 .u-flexCentering {
   display: flex;
 
-  &.-tb {
-    align-items: center;
+  &:not(.-fxd-c) {
+    &.-tb {
+      align-items: center;
+    }
+
+    &.-lr {
+      justify-content: center;
+    }
+
+    &.-fd {
+      align-items: center;
+      justify-content: center;
+    }
   }
 
-  &.-lr {
-    justify-content: center;
-  }
+  &.-fxd-c {
+    &.-tb {
+      justify-content: center;
+    }
 
-  &.-fd {
-    align-items: center;
-    justify-content: center;
+    &.-lr {
+      align-items: center;
+    }
+
+    &.-fd {
+      align-items: center;
+      justify-content: center;
+    }
   }
 }

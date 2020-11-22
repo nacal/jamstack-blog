@@ -6,8 +6,4 @@
 
 .c-tag {
   display: inline;
-  &:hover {
-    background-color: $icon-hover-color;
-    transition: 0.5s all ease-out 0s;
-  }
 }

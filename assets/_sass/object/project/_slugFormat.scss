@@ -8,8 +8,8 @@
   word-break: break-word;
 
   h2 {
-    padding-bottom: 0.25em 0;
-    margin: 1.5em 0 0.5em;
+    padding-bottom: .25em 0;
+    margin: 1.5em 0 .5em;
     font-size: 1.5rem;
     font-weight: bold;
     border-bottom: solid 3px $main-color;
@@ -21,8 +21,8 @@
   }
 
   h3 {
-    padding-left: 0.5em;
-    margin: 1.5em 0 0.5em;
+    padding-left: .5em;
+    margin: 1.5em 0 .5em;
     font-size: 1.25rem;
     font-weight: bold;
     border-left: solid 5px $main-color;
@@ -44,7 +44,7 @@
   }
 
   h5 {
-    margin: 0.5em 0 0;
+    margin: .5em 0 0;
     font-weight: bold;
   }
 
@@ -67,8 +67,8 @@
     li {
       &::before {
         display: inline-block;
-        width: 0.8em;
-        height: 0.2em;
+        width: .8em;
+        height: .2em;
         margin: 0 8px 4px 0;
         vertical-align: middle;
         content: "";
@@ -79,8 +79,9 @@
 
   ol {
     list-style-type: decimal;
+
     li {
-      padding-left: 0.25em;
+      padding-left: .25em;
       margin-left: 1em;
     }
   }
