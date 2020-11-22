@@ -3,10 +3,10 @@
     <figure class="p-post__figure">
       <nuxt-link :to="{ path: `/${tagSlug}/${slug}` }">
         <img
-          class="p-post__image"
           :src="headerImage.fields.file.url"
           :alt="headerImage.fields.description"
-        />
+          class="p-post__image"
+        >
       </nuxt-link>
     </figure>
     <div class="p-post__text c-flex -fxd-c -jc-sb">
@@ -22,11 +22,15 @@
       </div>
       <div class="p-post__data c-flex -jc-sb">
         <p class="p-post__tag">
-          <nuxt-link :to="{ path: `/${tagSlug}` }" class="c-tag">
+          <nuxt-link 
+            :to="{ path: `/${tagSlug}` }" 
+            class="c-tag">
             {{ tag }}
           </nuxt-link>
         </p>
-        <p lang="en" class="p-post__date">
+        <p 
+          lang="en" 
+          class="p-post__date">
           <time :datetime="publishedAt">{{
             new Date(publishedAt).toLocaleDateString()
           }}</time>

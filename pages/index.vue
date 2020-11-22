@@ -2,13 +2,13 @@
   <section class="p-posts">
     <Card
       v-for="post in posts"
-      v-bind:key="post.fields.slug"
+      :key="post.fields.slug"
       :title="post.fields.title"
       :slug="post.fields.slug"
-      :headerImage="post.fields.headerImage"
-      :publishedAt="post.fields.publishedAt"
+      :header-image="post.fields.headerImage"
+      :published-at="post.fields.publishedAt"
       :tag="post.fields.tag.fields.tag"
-      :tagSlug="post.fields.tag.fields.tagSlug"
+      :tag-slug="post.fields.tag.fields.tagSlug"
     />
   </section>
 </template>

@@ -1,8 +1,13 @@
 <template>
   <div>
     <transition name="button">
-      <button v-show="buttonActive" @click="returnTop" class="p-returnTop">
-        <fa :icon="faAngleUp" class="p-returnTop__icon" />
+      <button 
+        v-show="buttonActive" 
+        class="p-returnTop" 
+        @click="returnTop">
+        <fa 
+          :icon="faAngleUp" 
+          class="p-returnTop__icon" />
         <span class="u-screenReaderText">Topへ戻る</span>
       </button>
     </transition>
@@ -19,6 +24,11 @@ export default Vue.extend({
       buttonActive: false,
       scroll: 0
     };
+  },
+  computed: {
+    faAngleUp() {
+      return faAngleUp;
+    }
   },
   mounted() {
     window.addEventListener("scroll", this.scrollWindow);
@@ -40,11 +50,6 @@ export default Vue.extend({
       }
     }
   },
-  computed: {
-    faAngleUp() {
-      return faAngleUp;
-    }
-  }
 });
 </script>
 
