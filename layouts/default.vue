@@ -2,8 +2,8 @@
   <div class="p-body">
     <header class="l-header">
       <div class="p-header">
-        <div class="l-container u-flexCentering -tb c-flex -fxd-c">
-          <div class="test">
+        <div class="p-header__container l-container u-flexCentering -tb c-flex -fxd-c">
+          <div class="p-header__hero u-flexCentering -lr c-flex -fxd-c">
             <h1 class="p-header__title">
               <span
                 class="u-screenReaderText"
@@ -21,9 +21,7 @@
                 >
               </nuxt-link>
             </h1>
-            <h2 class="p-header__copy">
-              アウトプットをコツコツ積み上げるTechブログ
-            </h2>
+            <h2 class="p-header__copy">アウトプットをコツコツ積み上げるTechブログ</h2>
           </div>
         </div>
         <!-- /.l-container -->
@@ -51,7 +49,7 @@
     </main>
     <footer class="l-footer">
       <div class="p-footer">
-        <article class="p-footer__copyright c-copyright u-flexCentering -fd">
+        <article class="p-footer__copyright c-copyright c-flex -ai-fe -jc-fe">
           <small lang="en">&copy; 2020 Hikaru Nakata.</small>
         </article>
       </div>

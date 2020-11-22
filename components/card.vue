@@ -22,14 +22,14 @@
       </div>
       <div class="p-post__data c-flex -jc-sb">
         <p class="p-post__tag">
-          <nuxt-link 
-            :to="{ path: `/${tagSlug}` }" 
+          <nuxt-link
+            :to="{ path: `/${tagSlug}` }"
             class="c-tag">
             {{ tag }}
           </nuxt-link>
         </p>
-        <p 
-          lang="en" 
+        <p
+          lang="en"
           class="p-post__date">
           <time :datetime="publishedAt">{{
             new Date(publishedAt).toLocaleDateString()
