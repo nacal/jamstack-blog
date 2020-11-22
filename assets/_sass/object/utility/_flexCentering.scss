@@ -6,7 +6,7 @@
 .u-flexCentering {
   display: flex;
 
-  :not(.-fxd-c) {
+  &:not(.-fxd-c) {
     &.-tb {
       align-items: center;
     }
