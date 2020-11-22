@@ -9,6 +9,7 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 10px;
 }
+
 .item {
   padding: 15px;
   text-align: center;
@@ -88,80 +89,105 @@
   .grid--justify {
     margin: -8px;
   }
+
   .grid--justify .grid__item {
     border-width: 8px;
   }
+
   .grid__item--tab--1 {
     width: 8.33333%;
   }
+
   .grid__item--tab--2 {
     width: 16.66667%;
   }
+
   .grid__item--tab--3 {
     width: 25%;
   }
+
   .grid__item--tab--4 {
     width: 33.33333%;
   }
+
   .grid__item--tab--5 {
     width: 41.66667%;
   }
+
   .grid__item--tab--6 {
     width: 50%;
   }
+
   .grid__item--tab--7 {
     width: 58.33333%;
   }
+
   .grid__item--tab--8 {
     width: 66.66667%;
   }
+
   .grid__item--tab--9 {
     width: 75%;
   }
+
   .grid__item--tab--10 {
     width: 83.33333%;
   }
+
   .grid__item--tab--11 {
     width: 91.66667%;
   }
+
   .grid__item--tab--12 {
     width: 100%;
   }
 }
+
 @media screen and (min-width: 1024px) {
   .grid__item--pc--1 {
     width: 8.33333%;
   }
+
   .grid__item--pc--2 {
     width: 16.66667%;
   }
+
   .grid__item--pc--3 {
     width: 25%;
   }
+
   .grid__item--pc--4 {
     width: 33.33333%;
   }
+
   .grid__item--pc--5 {
     width: 41.66667%;
   }
+
   .grid__item--pc--6 {
     width: 50%;
   }
+
   .grid__item--pc--7 {
     width: 58.33333%;
   }
+
   .grid__item--pc--8 {
     width: 66.66667%;
   }
+
   .grid__item--pc--9 {
     width: 75%;
   }
+
   .grid__item--pc--10 {
     width: 83.33333%;
   }
+
   .grid__item--pc--11 {
     width: 91.66667%;
   }
+
   .grid__item--pc--12 {
     width: 100%;
   }
