@@ -1,12 +1,12 @@
 <template>
   <div>
     <transition name="button">
-      <button 
-        v-show="buttonActive" 
-        class="p-returnTop" 
+      <button
+        v-show="buttonActive"
+        class="p-returnTop"
         @click="returnTop">
-        <fa 
-          :icon="faAngleUp" 
+        <fa
+          :icon="faAngleUp"
           class="p-returnTop__icon" />
         <span class="u-screenReaderText">Topへ戻る</span>
       </button>
@@ -56,8 +56,9 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .button-enter-active,
 .button-leave-active {
-  transition: opacity 0.5s;
+  transition: opacity .5s;
 }
+
 .button-enter,
 .button-leave-to {
   opacity: 0;
