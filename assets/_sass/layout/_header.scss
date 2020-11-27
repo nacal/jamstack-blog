@@ -6,7 +6,7 @@
 .l-header {
   height: 320px;
 
-  @include mq(tab) {
-    //mq
+  @include mq(lap) {
+    height: 360px;
   }
 }
