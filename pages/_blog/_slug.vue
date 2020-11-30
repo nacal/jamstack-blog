@@ -10,8 +10,8 @@
           {{ post.fields.tag.fields.tag }}
         </nuxt-link>
       </p>
-      <p 
-        lang="en" 
+      <p
+        lang="en"
         class="p-post__date -slug">
         <time :datetime="post.fields.publishedAt">{{
           new Date(post.fields.publishedAt).toLocaleDateString()
@@ -23,20 +23,27 @@
       :alt="post.fields.headerImage.fields.description"
       class="p-slug__image"
     >
-    <div
-      class="p-slug__text p-slugFormat"
-      v-html="$md.render(post.fields.body)"
-    />
+    <div class="p-slug__text">
+      <div
+        class="p-slugFormat"
+        v-html="$md.render(post.fields.body)"
+      />
+      <Share />
+    </div>
   </section>
 </template>
 
 <script>
+import Share from "~/components/Share.vue";
 import { createClient } from "~/plugins/contentful.js";
 import Prism from "~/plugins/prism";
 
 const client = createClient();
 export default {
   transition: "slug",
+  components: {
+    Share
+  },
   async asyncData({ env, params }) {
     return await client
       .getEntries({
@@ -78,7 +85,7 @@ export default {
         {
           hid: "og:title",
           property: "og:title",
-          content: this.post.fields.title
+          content: this.post.fields.title + " - NKTech"
         },
         {
           hid: "og:description",

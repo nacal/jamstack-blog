@@ -11,7 +11,7 @@
   background-color: $main-color;
 
   @include mq(wide) {
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - calc(90vw / 5.37)), 10% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 
   &__container {
@@ -21,16 +21,19 @@
   }
 
   &__hero {
-    margin-top: -3rem;
+    margin-top: -10vw;
 
     @include mq(tab) {
+      margin-top: -12vw;
+    }
+
+    @include mq(wide) {
       margin-top: 0;
-      transform: rotate(-9.9deg);
     }
   }
 
   &__title {
-    width: 240px;
+    width: 200px;
     max-width: 75%;
     margin-bottom: .5rem;
     line-height: 4rem;
