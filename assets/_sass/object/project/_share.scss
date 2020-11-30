@@ -1,0 +1,16 @@
+@charset 'UTF-8';
+
+/*
+  Share
+----------------------------------------------------- */
+
+.p-share {
+  padding-top: 5rem;
+
+  &__title {
+    display: inline;
+    padding: 0 1rem;
+    font-size: 2rem;
+    border-bottom: solid 3px #00aca3;/* 下線 */
+  }
+}
