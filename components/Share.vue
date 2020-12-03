@@ -93,11 +93,7 @@ export default {
         console.error(e)
       }),
       this.message = "copied!";
-      // setTimeout(this.closeModal(), 3000);
     },
-    // closeModal() {
-    //   this.$parent.showModal = false;
-    // }
   },
 }
 </script>
