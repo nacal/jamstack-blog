@@ -19,6 +19,7 @@ import { createClient } from "~/plugins/contentful.js";
 
 const client = createClient();
 export default {
+  transition: "fade",
   components: {
     Card
   },
@@ -37,3 +38,19 @@ export default {
   }
 };
 </script>
+
+<style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: all .5s ease-out;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter {
+  transform: translateY(15px);
+}
+</style>

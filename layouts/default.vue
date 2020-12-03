@@ -23,19 +23,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.slug-enter-active,
-.slug-leave-active {
-  transition: all .5s ease-out;
-}
-
-.slug-enter,
-.slug-leave-to {
-  opacity: 0;
-}
-
-.slug-enter {
-  transform: translateY(15px);
-}
-</style>
