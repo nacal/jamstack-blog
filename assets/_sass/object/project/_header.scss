@@ -7,28 +7,12 @@
 .p-header {
   position: relative;
   height: 100%;
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - calc(100vw / 5.37)), 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - calc(30vw / 5.37)), 70vw 100%, 0 100%);
   background-color: $main-color;
-
-  @include mq(wide) {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
 
   &__container {
     @include mq(tab) {
       align-items: flex-start;
-    }
-  }
-
-  &__hero {
-    margin-top: -10vw;
-
-    @include mq(tab) {
-      margin-top: -12vw;
-    }
-
-    @include mq(wide) {
-      margin-top: 0;
     }
   }
 

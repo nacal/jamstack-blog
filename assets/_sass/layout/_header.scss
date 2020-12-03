@@ -4,9 +4,5 @@
   Header
 ----------------------------------------------------- */
 .l-header {
-  height: 320px;
-
-  @include mq(lap) {
-    height: 360px;
-  }
+  height: 260px;
 }
