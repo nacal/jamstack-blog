@@ -1,0 +1,21 @@
+@charset 'UTF-8';
+
+/*
+  Category
+----------------------------------------------------- */
+
+.p-category {
+  &__title {
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    text-align: center;
+
+    & .-ja {
+      font-size: 2rem;
+    }
+
+    & .-en {
+      border-bottom: 2px solid $main-color;
+    }
+  }
+}

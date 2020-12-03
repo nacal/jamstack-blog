@@ -43,7 +43,7 @@ export default {
       .getEntries({
         content_type: env.CTF_BLOG_POST_TYPE_ID,
         order: "-fields.publishedAt",
-        "fields.tag.sys.id": "29aaVZBrUu3EjY9sRbX7ud",
+        "fields.tag.sys.id": "6GhOaTj8tHlWawxiiDpoDU",
 })
       .then(entries => {
         return {
