@@ -21,7 +21,7 @@
         </h1>
       </div>
       <div class="p-post__data c-flex -jc-sb">
-        <p class="p-post__tag">
+        <p class="p-tag">
           <nuxt-link
             :to="{ path: `/${tagSlug}` }"
             class="c-tag">

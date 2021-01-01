@@ -52,18 +52,6 @@
     padding-bottom: 1rem;
   }
 
-  &__tag {
-    padding: .2rem .4rem;
-    font-size: .8rem;
-    color: $secondary-text-color;
-    background-color: $tag-color;
-
-    &:hover {
-      background-color: $icon-hover-color;
-      transition: .5s all ease-out 0s;
-    }
-  }
-
   &__date {
     align-self: center;
 

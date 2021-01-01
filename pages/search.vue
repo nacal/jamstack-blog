@@ -1,6 +1,10 @@
 <template>
   <div>
-    <SearchForm />
+    <article class="p-search">
+      <SearchForm />
+      <Tags />
+      <p class="p-search__title">「{{ query }}」　検索結果 : {{ posts.length }}件</p>
+    </article>
     <section class="p-posts">
       <Card
         v-for="post in posts"
@@ -18,12 +22,16 @@
 
 <script>
 import Card from "~/components/Card.vue";
+import SearchForm from "~/components/SearchForm.vue";
+import Tags from "~/components/Tags.vue";
 import { createClient } from "~/plugins/contentful.js";
 
 const client = createClient();
 export default {
   components: {
     Card,
+    SearchForm,
+    Tags
   },
   data() {
     return {
