@@ -1,16 +1,19 @@
 <template>
-  <section class="p-posts">
-    <Card
-      v-for="post in posts"
-      :key="post.fields.slug"
-      :title="post.fields.title"
-      :slug="post.fields.slug"
-      :header-image="post.fields.headerImage"
-      :published-at="post.fields.publishedAt"
-      :tag="post.fields.tag.fields.tag"
-      :tag-slug="post.fields.tag.fields.tagSlug"
-    />
-  </section>
+  <div>
+    <SearchForm />
+    <section class="p-posts">
+      <Card
+        v-for="post in posts"
+        :key="post.fields.slug"
+        :title="post.fields.title"
+        :slug="post.fields.slug"
+        :header-image="post.fields.headerImage"
+        :published-at="post.fields.publishedAt"
+        :tag="post.fields.tag.fields.tag"
+        :tag-slug="post.fields.tag.fields.tagSlug"
+      />
+    </section>
+  </div>
 </template>
 
 <script>

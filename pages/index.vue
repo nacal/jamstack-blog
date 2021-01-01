@@ -1,20 +1,24 @@
 <template>
-  <section class="p-posts">
-    <Card
-      v-for="post in posts"
-      :key="post.fields.slug"
-      :title="post.fields.title"
-      :slug="post.fields.slug"
-      :header-image="post.fields.headerImage"
-      :published-at="post.fields.publishedAt"
-      :tag="post.fields.tag.fields.tag"
-      :tag-slug="post.fields.tag.fields.tagSlug"
-    />
-  </section>
+  <div>
+    <SearchForm />
+    <section class="p-posts">
+      <Card
+        v-for="post in posts"
+        :key="post.fields.slug"
+        :title="post.fields.title"
+        :slug="post.fields.slug"
+        :header-image="post.fields.headerImage"
+        :published-at="post.fields.publishedAt"
+        :tag="post.fields.tag.fields.tag"
+        :tag-slug="post.fields.tag.fields.tagSlug"
+      />
+    </section>
+  </div>
 </template>
 
 <script>
 import Card from "~/components/Card.vue";
+import SearchForm from "~/components/SearchForm.vue";
 import { createClient } from "~/plugins/contentful.js";
 
 const client = createClient();
@@ -22,6 +26,7 @@ export default {
   transition: "fade",
   components: {
     Card,
+    SearchForm
   },
   async asyncData({ env, params }) {
     return await client

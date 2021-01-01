@@ -7,7 +7,7 @@
         ref="searchForm"
         v-model="query"
         hide-details
-        placeholder="キーワードを入力"
+        placeholder="記事を検索"
         dense
       />
     </v-form>
