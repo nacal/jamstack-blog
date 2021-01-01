@@ -30,6 +30,7 @@
           target="_blank">
           <fa
             :icon="faTwitter"
+            aria-label="Twitterのアイコン"
             class="p-sns__item -main" />
         </a>
         <a
@@ -37,6 +38,7 @@
           target="_blank"
         ><fa
           :icon="faGithub"
+          aria-label="Githubのアイコン"
           class="p-sns__item -main"
         /></a>
       </div>
