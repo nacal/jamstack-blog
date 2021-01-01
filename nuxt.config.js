@@ -150,4 +150,6 @@ module.exports = {
   fontawesome: {
     component: "fa",
   },
+  buildModules: ['@nuxtjs/vuetify'],
+  components: true
 };

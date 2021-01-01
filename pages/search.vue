@@ -19,15 +19,31 @@ import { createClient } from "~/plugins/contentful.js";
 
 const client = createClient();
 export default {
-  transition: "fade",
   components: {
     Card,
   },
-  async asyncData({ env, params }) {
+  data() {
+    return {
+      query: ''
+    }
+  },
+  watch: {
+    '$route.query.q': {
+      handler(newVal) {
+        this.query = newVal
+      },
+      immediate: true
+    }
+  },
+  transition: "fade",
+  async asyncData({ env, params, query }) {
+    let data = query.q
+    console.log(data)
     return await client
       .getEntries({
         content_type: env.CTF_BLOG_POST_TYPE_ID,
         order: "-fields.publishedAt",
+        'query': data
       })
       .then(entries => {
         return {
@@ -35,22 +51,6 @@ export default {
         };
       })
       .catch(console.error);
-  }
+  },
 };
 </script>
-
-<style>
-.fade-enter-active,
-.fade-leave-active {
-  transition: all .5s ease-out;
-}
-
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
-
-.fade-enter {
-  transform: translateY(15px);
-}
-</style>
