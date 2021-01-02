@@ -9,9 +9,23 @@
     </li>
     <li class="tags__item p-tag">
       <nuxt-link
-        :to="{ path: `/develop` }"
+        :to="{ path: `/accessibility` }"
         class="c-tag">
         アクセシビリティ
+      </nuxt-link>
+    </li>
+    <li class="tags__item p-tag">
+      <nuxt-link
+        :to="{ path: `/css` }"
+        class="c-tag">
+        CSS
+      </nuxt-link>
+    </li>
+    <li class="tags__item p-tag">
+      <nuxt-link
+        :to="{ path: `/techbook` }"
+        class="c-tag">
+        技術書
       </nuxt-link>
     </li>
     <li class="tags__item p-tag">
