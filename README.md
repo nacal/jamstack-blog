@@ -1,6 +1,6 @@
 # nuxt-blog
 
-> Nuxt.js + Contentful + Netlify SPA blog project
+> Nuxt.js + Contentful + Netlify JamStack blog project
 > [NKTech](https://nktech.jp/)
 
 ## Build Setup
