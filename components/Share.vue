@@ -13,6 +13,7 @@
           target="_blank">
           <fa
             :icon="faTwitter"
+            aria-label="Twitterのアイコン"
             class="p-sns__item -share" />
           <span class="u-screenReaderText">Twitterで共有</span>
         </a>
@@ -24,6 +25,7 @@
           target="_blank">
           <fa
             :icon="faFacebookF"
+            aria-label="Facebookのアイコン"
             class="p-sns__item -share" />
           <span class="u-screenReaderText">Facebookで共有</span>
         </a>
@@ -35,6 +37,7 @@
           @click="writeToClipboard(url)">
           <fa
             :icon="faLink"
+            aria-label="Linkのアイコン"
             class="p-sns__item -share" />
           <span class="u-screenReaderText">URLをクリップボードにコピー</span>
         </a>

@@ -1,0 +1,18 @@
+@charset 'UTF-8';
+
+/*
+  Tag
+----------------------------------------------------- */
+
+.p-tag {
+  display: inline;
+  padding: .2rem .4rem;
+  font-size: .8rem;
+  color: $secondary-text-color;
+  background-color: $tag-color;
+
+  &:hover {
+    background-color: $icon-hover-color;
+    transition: .5s all ease-out 0s;
+  }
+}

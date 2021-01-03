@@ -1,17 +1,10 @@
 <template>
-  <div class="p-category">
-    <div class="u-flexCentering -lr">
-      <h2 class="p-category__title c-flex -fxd-c">
-        <span
-          lang="en"
-          class="u-uppercase -en">
-          Category
-        </span>
-        <span class="u-uppercase -ja">
-          {{ posts[0].fields.tag.fields.tag }}
-        </span>
-      </h2>
-    </div>
+  <div>
+    <article class="p-search">
+      <SearchForm />
+      <Tags />
+      <p class="p-search__title">「{{ query }}」　検索結果 : {{ posts.length }}件</p>
+    </article>
     <section class="p-posts">
       <Card
         v-for="post in posts"
@@ -29,25 +22,43 @@
 
 <script>
 import Card from "~/components/Card.vue";
+import SearchForm from "~/components/SearchForm.vue";
+import Tags from "~/components/Tags.vue";
 import { createClient } from "~/plugins/contentful.js";
 
 const client = createClient();
-
 export default {
-  transition: "fade",
   components: {
-    Card
+    Card,
+    SearchForm,
+    Tags
   },
-  async asyncData({ env, params }) {
+  data() {
+    return {
+      query: ''
+    }
+  },
+  watch: {
+    '$route.query.q': {
+      handler(newVal) {
+        this.query = newVal
+      },
+      immediate: true
+    }
+  },
+  transition: "fade",
+  async asyncData({ env, params, query }) {
+    let data = query.q
+    console.log(data)
     return await client
       .getEntries({
         content_type: env.CTF_BLOG_POST_TYPE_ID,
         order: "-fields.publishedAt",
-        "fields.tag.sys.id": "6GhOaTj8tHlWawxiiDpoDU",
-})
+        'query': data
+      })
       .then(entries => {
         return {
-          posts: entries.items,
+          posts: entries.items
         };
       })
       .catch(console.error);

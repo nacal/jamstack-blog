@@ -2,7 +2,7 @@
   <section class="p-slug">
     <h1 class="p-slug__title">{{ post.fields.title }}</h1>
     <div class="p-slug__data p-post__data c-flex -jc-sb">
-      <p class="p-post__tag">
+      <p class="p-tag">
         <nuxt-link
           :to="{ path: `/${post.fields.tag.fields.tagSlug}` }"
           class="c-tag"
