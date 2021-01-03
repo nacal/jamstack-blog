@@ -48,6 +48,7 @@
         <fa
           :icon="faSearch"
           aria-label="虫眼鏡のアイコン"
+          role="button"
           class="SearchForm__icon"
           @click="naviOpen"/>
         <SearchForm/>
