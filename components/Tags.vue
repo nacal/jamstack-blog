@@ -41,8 +41,14 @@
 
 <style lang="scss" scoped>
 .tags {
-  &__item + &__item {
-    margin-left: 1rem;
+  flex-wrap: wrap;
+
+  &__item {
+    margin-top: 1rem;
+
+    & + & {
+      margin-left: 1rem;
+    }
   }
 }
 </style>

@@ -101,7 +101,7 @@ return {
   transition: all .5s ease-out;
 
   &__icon {
-    margin: 0 16px 4px 0;
+    margin: 8px 16px 0 0;
     font-size: 1.25rem;
   }
 
