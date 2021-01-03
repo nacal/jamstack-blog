@@ -42,6 +42,16 @@
           class="p-sns__item -main"
         /></a>
       </div>
+      <div
+        :class="{'is-active': active}"
+        class="SearchForm">
+        <fa
+          :icon="faSearch"
+          aria-label="虫眼鏡のアイコン"
+          class="SearchForm__icon"
+          @click="naviOpen"/>
+        <SearchForm/>
+      </div>
     </div>
     <!-- /.p-header -->
   </header>
@@ -49,8 +59,19 @@
 
 <script>
 import { faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faSearch} from "@fortawesome/free-solid-svg-icons";
+import SearchForm from "~/components/SearchForm.vue";
 
 export default {
+  components: {
+    SearchForm
+  },
+  data: function() {
+return {
+    active: false,
+    navi: false,
+  };
+},
   computed: {
     faTwitter() {
       return faTwitter;
@@ -58,6 +79,34 @@ export default {
     faGithub() {
       return faGithub;
     },
+    faSearch() {
+      return faSearch;
+    },
   },
+  methods: {
+    naviOpen: function() {
+      this.active = !this.active;
+    }
+  }
 }
 </script>
+
+<style lang="scss" scoped>
+.SearchForm {
+  position: absolute;
+  top: 8px;
+  right: -172px;
+  display: flex;
+  align-items: center;
+  transition: all .5s ease-out;
+
+  &__icon {
+    margin: 0 16px 4px 0;
+    font-size: 1.25rem;
+  }
+
+  &.is-active {
+    right: 8px;
+  }
+}
+</style>

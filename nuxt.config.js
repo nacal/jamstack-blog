@@ -151,5 +151,5 @@ module.exports = {
     component: "fa",
   },
   buildModules: ['@nuxtjs/vuetify'],
-  components: true
+  components: true,
 };

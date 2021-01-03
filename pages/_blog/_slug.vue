@@ -40,7 +40,6 @@ import Prism from "~/plugins/prism";
 
 const client = createClient();
 export default {
-  layout: 'post',
   transition: "fade",
   components: {
     Share
