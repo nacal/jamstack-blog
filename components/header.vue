@@ -96,14 +96,14 @@ return {
 .SearchForm {
   position: absolute;
   top: 8px;
-  right: -172px;
+  right: -174px;
   display: flex;
   align-items: center;
   transition: all .5s ease-out;
 
   &__icon {
     margin: 8px 16px 0 0;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
   &.is-active {
