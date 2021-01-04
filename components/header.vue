@@ -101,7 +101,7 @@ return {
   right: -174px;
   display: flex;
   align-items: center;
-  transition: all .5s ease-out;
+  transition: all .25s ease-out;
 
   &__icon {
     margin: 8px 16px 0 0;
@@ -110,7 +110,7 @@ return {
 
   &__form {
     opacity: 0;
-    transition: all .5s ease-out;
+    transition: all .25s ease-out;
 
     &.is-active {
       opacity: 100%;
