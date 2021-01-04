@@ -51,7 +51,9 @@
           role="button"
           class="SearchForm__icon"
           @click="naviOpen"/>
-        <SearchForm/>
+        <SearchForm
+          :class="{'is-active': active}"
+          class="SearchForm__form"/>
       </div>
     </div>
     <!-- /.p-header -->
@@ -104,6 +106,15 @@ return {
   &__icon {
     margin: 8px 16px 0 0;
     font-size: 1.5rem;
+  }
+
+  &__form {
+    opacity: 0;
+    transition: all .5s ease-out;
+
+    &.is-active {
+      opacity: 100%;
+    }
   }
 
   &.is-active {
