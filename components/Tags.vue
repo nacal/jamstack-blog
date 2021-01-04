@@ -45,6 +45,7 @@
 
   &__item {
     margin-top: 1rem;
+    word-break: keep-all;
 
     & + & {
       margin-left: 1rem;

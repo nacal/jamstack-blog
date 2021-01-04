@@ -7,6 +7,7 @@
 .p-header {
   position: relative;
   height: 100%;
+  overflow: hidden;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - calc(30vw / 5.37)), 70vw 100%, 0 100%);
   background-color: $main-color;
 
