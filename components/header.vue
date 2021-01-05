@@ -47,7 +47,7 @@
         class="SearchForm">
         <fa
           :icon="faSearch"
-          aria-label="虫眼鏡のアイコン"
+          aria-label="検索フォームの表示、非常時を切り替える"
           role="button"
           class="SearchForm__icon"
           @click="naviOpen"/>
