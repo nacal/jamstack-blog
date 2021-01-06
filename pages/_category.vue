@@ -43,14 +43,16 @@ export default {
       category: ''
     }
   },
-  async asyncData({ env, params, route, category, redirect}) {
+  async asyncData({ env, params, route, category, error}) {
     let id;
     if(route.path === '/accessibility'){id = "5crTZ3kyo0jy0MKJ5ou2Dj", category = 'アクセシビリティ'}
     else if(route.path === '/css'){id = "6rl6BrfLzmPe7QeIf01VWR", category = 'CSS'}
     else if(route.path === '/develop'){id = "29aaVZBrUu3EjY9sRbX7ud", category = 'ブログ開発日記'}
     else if(route.path === '/techbook'){id = "4CBqPUDWvk1rMj1ePMDYU", category = '技術書'}
     else if(route.path === '/others'){id = "6GhOaTj8tHlWawxiiDpoDU", category = 'その他'}
-    else return redirect('/404')
+    else return error({
+      errorCode: 404
+    })
     return await client
       .getEntries({
         content_type: env.CTF_BLOG_POST_TYPE_ID,
