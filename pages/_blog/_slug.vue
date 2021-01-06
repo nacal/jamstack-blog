@@ -44,7 +44,7 @@ export default {
   components: {
     Share
   },
-  async asyncData({ env, params }) {
+  async asyncData({ env, params, error}) {
     return await client
       .getEntries({
         content_type: env.CTF_BLOG_POST_TYPE_ID,
