@@ -1,6 +1,8 @@
 <template>
   <article class="searchForm">
     <v-form
+      role="search"
+      aria-label="記事全文"
       @submit.prevent="submit"
     >
       <v-text-field

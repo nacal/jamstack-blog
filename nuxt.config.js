@@ -126,8 +126,12 @@ module.exports = {
         .then((entries) => {
           return [
             ...entries.items.map(
-              (entry) =>
-                `/${entry.fields.tag.fields.tagSlug}/${entry.fields.slug}`
+              (entry) =>{
+                return {
+                  route: `/${entry.fields.tag.fields.tagSlug}/${entry.fields.slug}`,
+                  payload: entry
+                }
+              }
             ),
           ];
         });
@@ -152,13 +156,4 @@ module.exports = {
   },
   buildModules: ['@nuxtjs/vuetify'],
   components: true,
-  router: {
-    extendRoutes (routes, resolve) {
-      routes.push({
-        name: 'custom',
-        path: '*',
-        component: resolve(__dirname, 'pages/404.vue')
-      })
-    }
-  },
 };
