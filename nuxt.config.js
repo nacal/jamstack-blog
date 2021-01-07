@@ -116,7 +116,12 @@ module.exports = {
    ** Global CSS
    */
   css: [{ src: "~/assets/_sass/common.scss", lang: "scss" }],
-  modules: ["nuxt-fontawesome"],
+
+  styleResources: {
+    scss: ['@/assets/_sass/*.scss'],
+  },
+
+  modules: ["nuxt-fontawesome",'@nuxtjs/style-resources'],
 
   generate: {
     fallback: true,
