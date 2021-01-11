@@ -1,8 +1,8 @@
 <template>
-  <p class="p-tag">
+  <p class="tag">
     <nuxt-link
       :to="{ path: `/${ tagSlug }` }"
-      class="c-tag"
+      class="tag__link"
     >
       {{ tagName }}
     </nuxt-link>
@@ -24,3 +24,22 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.tag {
+  display: inline;
+  padding: .2rem .4rem;
+  font-size: .8rem;
+  color: $secondary-text-color;
+  background-color: $tag-color;
+
+  &:hover {
+    background-color: $icon-hover-color;
+    transition: .5s all ease-out 0s;
+  }
+
+  &__link {
+    display: inline;
+  }
+}
+</style>
