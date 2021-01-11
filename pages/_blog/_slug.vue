@@ -30,18 +30,12 @@
 </template>
 
 <script>
-import Share from "~/components/Share.vue";
-import Tag from "~/components/Tag.vue";
 import { createClient } from "~/plugins/contentful.js";
 import Prism from "~/plugins/prism";
 
 const client = createClient();
 export default {
   transition: "fade",
-  components: {
-    Share,
-    Tag
-  },
   async asyncData({ env, params, error}) {
     return await client
       .getEntries({

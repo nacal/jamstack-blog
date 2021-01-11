@@ -20,19 +20,11 @@
 </template>
 
 <script>
-import Card from "~/components/Card.vue";
-import SearchForm from "~/components/SearchForm.vue";
-import Tags from "~/components/Tags.vue";
 import { createClient } from "~/plugins/contentful.js";
 
 const client = createClient();
 export default {
   transition: "fade",
-  components: {
-    Card,
-    SearchForm,
-    Tags
-  },
   async asyncData({ env, params }) {
     return await client
       .getEntries({

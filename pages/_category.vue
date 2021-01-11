@@ -28,16 +28,12 @@
 </template>
 
 <script>
-import Card from "~/components/Card.vue";
 import { createClient } from "~/plugins/contentful.js";
 
 const client = createClient();
 
 export default {
   transition: "fade",
-  components: {
-    Card
-  },
   data() {
     return {
       category: ''
