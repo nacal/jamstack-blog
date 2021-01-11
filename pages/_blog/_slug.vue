@@ -2,14 +2,10 @@
   <section class="p-slug">
     <h1 class="p-slug__title">{{ post.fields.title }}</h1>
     <div class="p-slug__data p-post__data c-flex -jc-sb">
-      <p class="p-tag">
-        <nuxt-link
-          :to="{ path: `/${post.fields.tag.fields.tagSlug}` }"
-          class="c-tag"
-        >
-          {{ post.fields.tag.fields.tag }}
-        </nuxt-link>
-      </p>
+      <Tag
+        :tag-name="post.fields.tag.fields.tag"
+        :tag-slug="post.fields.tag.fields.tagSlug"
+      />
       <p
         lang="en"
         class="p-post__date -slug">
@@ -35,6 +31,7 @@
 
 <script>
 import Share from "~/components/Share.vue";
+import Tag from "~/components/Tag.vue";
 import { createClient } from "~/plugins/contentful.js";
 import Prism from "~/plugins/prism";
 
@@ -42,7 +39,8 @@ const client = createClient();
 export default {
   transition: "fade",
   components: {
-    Share
+    Share,
+    Tag
   },
   async asyncData({ env, params, error}) {
     return await client
