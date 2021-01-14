@@ -1,5 +1,5 @@
 <template>
-  <div class="p-body">
+  <div class="body">
     <Header class="header"/>
     <main class="container main">
       <nuxt />
@@ -15,6 +15,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.body {
+  background-color: $base-color;
+}
+
 .header {
   height: 260px;
 }
