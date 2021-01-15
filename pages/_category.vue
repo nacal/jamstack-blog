@@ -36,16 +36,17 @@ export default {
   transition: "fade",
   data() {
     return {
-      category: ''
+      category: '',
+      path: ''
     }
   },
-  async asyncData({ env, params, route, category, error}) {
+  async asyncData({ env, params, route, category, path, error}) {
     let id;
-    if(route.path === '/accessibility'){id = "5crTZ3kyo0jy0MKJ5ou2Dj", category = 'アクセシビリティ'}
-    else if(route.path === '/css'){id = "6rl6BrfLzmPe7QeIf01VWR", category = 'CSS'}
-    else if(route.path === '/develop'){id = "29aaVZBrUu3EjY9sRbX7ud", category = 'ブログ開発日記'}
-    else if(route.path === '/techbook'){id = "4CBqPUDWvk1rMj1ePMDYU", category = '技術書'}
-    else if(route.path === '/others'){id = "6GhOaTj8tHlWawxiiDpoDU", category = 'その他'}
+    if(route.path === '/accessibility'){id = "5crTZ3kyo0jy0MKJ5ou2Dj", category = 'アクセシビリティ', path ='accessibility'}
+    else if(route.path === '/css'){id = "6rl6BrfLzmPe7QeIf01VWR", category = 'CSS', path ='css'}
+    else if(route.path === '/develop'){id = "29aaVZBrUu3EjY9sRbX7ud", category = 'ブログ開発日記', path ='develop'}
+    else if(route.path === '/techbook'){id = "4CBqPUDWvk1rMj1ePMDYU", category = '技術書', path ='techbook'}
+    else if(route.path === '/others'){id = "6GhOaTj8tHlWawxiiDpoDU", category = 'その他', path ='others'}
     else return error({
       errorCode: 404
     })
@@ -62,6 +63,52 @@ export default {
         };
       })
       .catch(console.error);
+  },
+
+  head() {
+    return {
+      title: this.category + " - NKTech",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "ブログカテゴリー「" + this.category + "」の一覧ページです。"
+        },
+        {
+          hid: "og:site_name",
+          property: "og:site_name",
+          content: this.category + " - NKTech"
+        },
+        { hid: "og:type", property: "og:type", content: "website" },
+        {
+          hid: "og:url",
+          property: "og:url",
+          content:
+            "https://nktech.jp/" + this.path
+        },
+        {
+          hid: "og:title",
+          property: "og:title",
+          content: this.category + " - NKTech"
+        },
+        {
+          hid: "og:description",
+          property: "og:description",
+          content:  "ブログカテゴリー「" + this.category + "」の一覧ページです。"
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: "https://nktech.jp/cardImage.jpg"
+        },
+        {
+          hid: "twitter:card",
+          name: "twitter:card",
+          content: "summary_large_image"
+        },
+        { hid: "twitter:site", name: "twitter:site", content: "@nkthkr_" }
+      ]
+    };
   },
 };
 </script>
