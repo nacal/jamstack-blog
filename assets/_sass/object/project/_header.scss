@@ -12,6 +12,8 @@
   background-color: $main-color;
 
   &__container {
+    height: 100%;
+
     @include mq(tab) {
       align-items: flex-start;
     }

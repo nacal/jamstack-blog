@@ -1,41 +1,35 @@
 <template>
   <ul class="tags u-flexCentering -lr">
-    <li class="tags__item p-tag">
-      <nuxt-link
-        :to="{ path: `/develop` }"
-        class="c-tag">
-        ブログ開発日記
-      </nuxt-link>
+    <li class="tags__item">
+      <Tag
+        tag-name="ブログ開発日記"
+        tag-slug="develop"
+      />
     </li>
-    <li class="tags__item p-tag">
-      <nuxt-link
-        :to="{ path: `/accessibility` }"
-        class="c-tag">
-        アクセシビリティ
-      </nuxt-link>
+    <li class="tags__item">
+      <Tag
+        tag-name="アクセシビリティ"
+        tag-slug="accessibility"
+      />
     </li>
-    <li class="tags__item p-tag">
-      <nuxt-link
-        :to="{ path: `/css` }"
-        class="c-tag">
-        CSS
-      </nuxt-link>
+    <li class="tags__item">
+      <Tag
+        tag-name="CSS"
+        tag-slug="css"
+      />
     </li>
-    <li class="tags__item p-tag">
-      <nuxt-link
-        :to="{ path: `/techbook` }"
-        class="c-tag">
-        技術書
-      </nuxt-link>
+    <li class="tags__item">
+      <Tag
+        tag-name="技術書"
+        tag-slug="techbook"
+      />
     </li>
-    <li class="tags__item p-tag">
-      <nuxt-link
-        :to="{ path: `/others` }"
-        class="c-tag">
-        その他
-      </nuxt-link>
+    <li class="tags__item">
+      <Tag
+        tag-name="その他"
+        tag-slug="others"
+      />
     </li>
-    <!-- <li></li> -->
   </ul>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
-  <header class="l-header">
+  <header>
     <div class="p-header">
-      <div class="p-header__container l-container u-flexCentering -fd c-flex -fxd-c">
+      <div class="p-header__container u-flexCentering -fd c-flex -fxd-c">
         <div class="u-flexCentering -lr c-flex -fxd-c">
           <h1 class="p-header__title">
             <span
@@ -63,18 +63,14 @@
 <script>
 import { faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faSearch} from "@fortawesome/free-solid-svg-icons";
-import SearchForm from "~/components/SearchForm.vue";
 
 export default {
-  components: {
-    SearchForm
-  },
   data: function() {
-return {
-    active: false,
-    navi: false,
-  };
-},
+    return {
+        active: false,
+        navi: false,
+      };
+  },
   computed: {
     faTwitter() {
       return faTwitter;

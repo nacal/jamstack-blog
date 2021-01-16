@@ -14,9 +14,6 @@
   2.0 - Layout
 ===================================================== */
 @import "layout/container";
-@import "layout/header";
-@import "layout/main";
-@import "layout/footer";
 
 /* =====================================================
   3.0 - Object
@@ -28,7 +25,6 @@
 @import "object/component/flex";
 @import "object/component/grid";
 @import "object/component/copyright";
-@import "object/component/tag";
 
 /*
   3.2 - Project
@@ -46,7 +42,6 @@
 @import "object/project/share";
 @import "object/project/shareButton";
 @import "object/project/category";
-@import "object/project/tag";
 @import "object/project/search";
 
 /*

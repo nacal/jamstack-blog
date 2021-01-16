@@ -21,13 +21,10 @@
         </h1>
       </div>
       <div class="p-post__data c-flex -jc-sb">
-        <p class="p-tag">
-          <nuxt-link
-            :to="{ path: `/${tagSlug}` }"
-            class="c-tag">
-            {{ tag }}
-          </nuxt-link>
-        </p>
+        <Tag
+          :tag-name="tag"
+          :tag-slug="tagSlug"
+        />
         <p
           lang="en"
           class="p-post__date">
