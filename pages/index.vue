@@ -7,6 +7,7 @@
     <section class="p-posts">
       <Card
         v-for="post in pagePosts"
+        v-show="show"
         :key="post.fields.slug"
         :title="post.fields.title"
         :slug="post.fields.slug"
@@ -33,13 +34,13 @@ import { createClient } from "~/plugins/contentful.js";
 
 const client = createClient();
 export default {
-  transition: "fade",
   data () {
     return {
       page: 1,
       pagePosts: [],
       pageSize: 6,
       length:0,
+      show: true
     }
   },
   async asyncData({ env, params }) {
@@ -62,7 +63,11 @@ export default {
   },
   methods: {
     pageChange: function(pageNumber){
-      this.pagePosts = this.posts.slice(this.pageSize*(pageNumber -1), this.pageSize*(pageNumber))
+      this.show = false;
+      window.setTimeout(() => {
+        this.pagePosts = this.posts.slice(this.pageSize*(pageNumber -1), this.pageSize*(pageNumber))
+        this.show = true;
+      }, 500);
     },
   },
 };
