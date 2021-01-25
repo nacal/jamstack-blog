@@ -109,7 +109,7 @@ export default {
     transition: all .25s ease-out;
 
     &.is-active {
-      opacity: 100%;
+      opacity: 1;
     }
   }
 

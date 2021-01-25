@@ -37,19 +37,40 @@ export default {
   data() {
     return {
       category: '',
-      path: ''
+      path: '',
+      id: ''
     }
   },
-  async asyncData({ env, params, route, category, path, error}) {
-    let id;
-    if(route.path === '/accessibility'){id = "5crTZ3kyo0jy0MKJ5ou2Dj", category = 'アクセシビリティ', path ='accessibility'}
-    else if(route.path === '/css'){id = "6rl6BrfLzmPe7QeIf01VWR", category = 'CSS', path ='css'}
-    else if(route.path === '/develop'){id = "29aaVZBrUu3EjY9sRbX7ud", category = 'ブログ開発日記', path ='develop'}
-    else if(route.path === '/techbook'){id = "4CBqPUDWvk1rMj1ePMDYU", category = '技術書', path ='techbook'}
-    else if(route.path === '/others'){id = "6GhOaTj8tHlWawxiiDpoDU", category = 'その他', path ='others'}
-    else return error({
-      errorCode: 404
-    })
+  async asyncData({ env, params, route, category, path, id, error}) {
+    switch (route.path) {
+      case '/accessibility':
+        id = "5crTZ3kyo0jy0MKJ5ou2Dj",
+        category = 'アクセシビリティ',
+        path ='accessibility'
+        break
+      case '/css':
+        id = "6rl6BrfLzmPe7QeIf01VWR",
+        category = 'CSS',
+        path ='css'
+        break
+      case '/develop':
+        id = "29aaVZBrUu3EjY9sRbX7ud",
+        category = 'ブログ開発日記',
+        path ='develop'
+        break
+      case '/techbook':
+        id = "4CBqPUDWvk1rMj1ePMDYU",
+        category = '技術書',
+        path ='techbook'
+        break
+      case '/others':
+        id = "6GhOaTj8tHlWawxiiDpoDU",
+        category = 'その他',
+        path ='others'
+        break
+      default:
+        return error({ errorCode: 404 })
+    }
     return await client
       .getEntries({
         content_type: env.CTF_BLOG_POST_TYPE_ID,

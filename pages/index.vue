@@ -6,7 +6,8 @@
     </article>
     <section class="p-posts">
       <Card
-        v-for="post in posts"
+        v-for="post in pagePosts"
+        v-show="show"
         :key="post.fields.slug"
         :title="post.fields.title"
         :slug="post.fields.slug"
@@ -16,6 +17,15 @@
         :tag-slug="post.fields.tag.fields.tagSlug"
       />
     </section>
+    <article class="pagination">
+      <v-pagination
+        v-model="page"
+        :length="length"
+        :circle="true"
+        color="#00aca3"
+        @input = "pageChange"
+      />
+    </article>
   </div>
 </template>
 
@@ -24,7 +34,15 @@ import { createClient } from "~/plugins/contentful.js";
 
 const client = createClient();
 export default {
-  transition: "fade",
+  data () {
+    return {
+      page: 1,
+      pagePosts: [],
+      pageSize: 6,
+      length:0,
+      show: true
+    }
+  },
   async asyncData({ env, params }) {
     return await client
       .getEntries({
@@ -37,7 +55,21 @@ export default {
         };
       })
       .catch(console.error);
-  }
+  },
+  mounted: function(){
+    this.posts
+    this.pagePosts = this.posts.slice(0,this.pageSize)
+    this.length = Math.ceil(this.posts.length/this.pageSize);
+  },
+  methods: {
+    pageChange: function(pageNumber){
+      this.show = false;
+      window.setTimeout(() => {
+        this.pagePosts = this.posts.slice(this.pageSize*(pageNumber -1), this.pageSize*(pageNumber))
+        this.show = true;
+      }, 500);
+    },
+  },
 };
 </script>
 
@@ -54,5 +86,9 @@ export default {
 
 .fade-enter {
   transform: translateY(15px);
+}
+
+.pagination {
+  margin-top: 64px;
 }
 </style>
