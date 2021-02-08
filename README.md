@@ -1,26 +1,20 @@
-# nuxt-blog
+# JamStack Blog Project
 
-> Nuxt.js + Contentful + Netlify JamStack blog project
-> [NKTech](https://nktech.jp/)
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)[License]
+[![Netlify Status](https://api.netlify.com/api/v1/badges/19488001-8686-4d68-a766-d763098a8aed/deploy-status)](https://app.netlify.com/sites/quizzical-pare-e9bb41/deploys)
 
-## Build Setup
+![NKTech](https://user-images.githubusercontent.com/55532835/107258358-0ad42c00-6a7f-11eb-9d6f-17a3b0d2f909.jpg)
 
-```bash
-# install dependencies
-$ yarn install
+[NKTech](https://nktech.jp/)
 
-# serve with hot reload at localhost:3000
-$ yarn run dev
+## Assets
+- [Vue.js](https://vuejs.org/)
+  - [Nuxt.js](https://nuxtjs.org/)
+  - [Vuetify](https://vuetifyjs.com/)
+- [Contentful](https://app.contentful.com/)
+- [Netlify](https://app.netlify.com/)
+- [GitHub](https://github.com/)
 
-# build for production and launch server
-$ yarn run build
-$ yarn start
 
-# generate static project
-$ yarn run generate
-```
-
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
-
-## License
-MIT
+## Architecture
+![nuxt-blog](https://user-images.githubusercontent.com/55532835/107258813-951c9000-6a7f-11eb-9ab4-2fb770817796.png)
