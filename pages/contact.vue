@@ -14,6 +14,7 @@
       label="お名前"
       required
       class="contact__text"
+      name="name"
     />
 
     <v-text-field
@@ -22,13 +23,15 @@
       label="メールアドレス"
       required
       class="contact__text"
+      name="email"
     />
 
     <v-textarea
-      :rules="contactRules"
+      :rules="messageRules"
       label="お問い合わせ内容"
       required
       class="contact__text"
+      name="message"
     />
 
     <v-btn
@@ -45,6 +48,7 @@
 
 <script>
 export default {
+  transition: "fade",
   data: () => ({
     valid: true,
     name: '',
@@ -56,8 +60,8 @@ export default {
       v => !!v || '返信用のメールアドレスを記入してください。',
       v => /.+@.+\..+/.test(v) || 'メールアドレスの形式が正しくありません。',
     ],
-    email: '',
-    contactRules: [
+    message: '',
+    messageRules: [
       v => !!v || 'お問い合わせ内容を記入してください。',
     ],
   }),

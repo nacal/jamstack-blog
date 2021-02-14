@@ -20,8 +20,8 @@
     </li>
     <li class="tags__item">
       <Tag
-        tag-name="技術書"
-        tag-slug="techbook"
+        tag-name="技術"
+        tag-slug="tech"
       />
     </li>
     <li class="tags__item">

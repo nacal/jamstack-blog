@@ -40,7 +40,16 @@
           :icon="faGithub"
           aria-label="Githubのアイコン"
           class="p-sns__item -main"
-        /></a>
+        />
+        </a>
+        <nuxt-link
+          to="/contact"
+        >
+          <fa
+            :icon="faEnvelope"
+            aria-label="お問い合わせのアイコン"
+            class="p-sns__item -main" />
+        </nuxt-link>
       </div>
       <div
         :class="{'is-active': active}"
@@ -62,7 +71,7 @@
 
 <script>
 import { faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faSearch} from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faEnvelope} from "@fortawesome/free-solid-svg-icons";
 
 export default {
   data: function() {
@@ -80,6 +89,9 @@ export default {
     },
     faSearch() {
       return faSearch;
+    },
+    faEnvelope() {
+      return faEnvelope;
     },
   },
   methods: {
