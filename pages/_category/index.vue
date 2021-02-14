@@ -58,10 +58,10 @@ export default {
         category = 'ブログ開発日記',
         path ='develop'
         break
-      case '/techbook':
+      case '/tech':
         id = "4CBqPUDWvk1rMj1ePMDYU",
-        category = '技術書',
-        path ='techbook'
+        category = '技術',
+        path ='tech'
         break
       case '/others':
         id = "6GhOaTj8tHlWawxiiDpoDU",

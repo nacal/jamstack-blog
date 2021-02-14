@@ -161,4 +161,6 @@ module.exports = {
   },
   buildModules: ['@nuxtjs/vuetify'],
   components: true,
+  ssr: true,
+  target: "static"
 };
