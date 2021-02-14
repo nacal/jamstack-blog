@@ -24,6 +24,7 @@
     >
       <v-text-field
         :rules="nameRules"
+        v-model="name"
         label="お名前"
         required
         class="contact__text"
@@ -32,6 +33,7 @@
 
       <v-text-field
         :rules="emailRules"
+        v-model="email"
         label="メールアドレス"
         required
         class="contact__text"
@@ -40,6 +42,7 @@
 
       <v-textarea
         :rules="messageRules"
+        v-model="message"
         label="お問い合わせ内容"
         required
         class="contact__text"
@@ -64,13 +67,16 @@ export default {
   transition: "fade",
   data: () => ({
     valid: true,
+    name: '',
     nameRules: [
       v => !!v || 'お名前を記入してください。',
     ],
+    email: "",
     emailRules: [
       v => !!v || '返信用のメールアドレスを記入してください。',
       v => /.+@.+\..+/.test(v) || 'メールアドレスの形式が正しくありません。',
     ],
+    message: "",
     messageRules: [
       v => !!v || 'お問い合わせ内容を記入してください。',
     ],
