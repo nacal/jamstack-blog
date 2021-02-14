@@ -6,10 +6,10 @@
     data-netlify="true"
     name="contact"
     method="POST"
-    class="contact u-centaring -fd"
+    action="/success"
+    class="contact"
   >
     <v-text-field
-      v-model="name"
       :rules="nameRules"
       label="お名前"
       required
@@ -18,7 +18,6 @@
     />
 
     <v-text-field
-      v-model="email"
       :rules="emailRules"
       label="メールアドレス"
       required
@@ -51,16 +50,13 @@ export default {
   transition: "fade",
   data: () => ({
     valid: true,
-    name: '',
     nameRules: [
       v => !!v || 'お名前を記入してください。',
     ],
-    email: '',
     emailRules: [
       v => !!v || '返信用のメールアドレスを記入してください。',
       v => /.+@.+\..+/.test(v) || 'メールアドレスの形式が正しくありません。',
     ],
-    message: '',
     messageRules: [
       v => !!v || 'お問い合わせ内容を記入してください。',
     ],
