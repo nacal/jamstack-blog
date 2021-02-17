@@ -1,18 +1,9 @@
 <template>
   <article>
     <section>
-      <div class="u-flexCentering -lr">
-        <h2 class="p-category__title c-flex -fxd-c">
-          <span
-            lang="en"
-            class="u-uppercase -en">
-            Contact
-          </span>
-          <span class="u-uppercase -ja">
-            お問い合わせ
-          </span>
-        </h2>
-      </div>
+      <Title 
+        title="お問い合わせ" 
+        subTitle="contact" />
       <v-form
         ref="form"
         v-model="valid"
