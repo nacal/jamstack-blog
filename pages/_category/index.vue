@@ -52,7 +52,7 @@ export default {
         break
       case '/tech':
         id = "4CBqPUDWvk1rMj1ePMDYU",
-        category = '技術',
+        category = '技術全般',
         path ='tech'
         break
       case '/others':
