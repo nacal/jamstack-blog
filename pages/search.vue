@@ -38,13 +38,12 @@ export default {
   },
   transition: "fade",
   async asyncData({ env, params, query }) {
-    let data = query.q
-    console.log(data)
+    let search = query.q
     return await client
       .getEntries({
         content_type: env.CTF_BLOG_POST_TYPE_ID,
         order: "-fields.publishedAt",
-        'query': data
+        'query': search
       })
       .then(entries => {
         return {
@@ -59,7 +58,7 @@ export default {
 <style lang="scss" scoped>
 .p-search {
   &__title {
-    margin-top: 32px;
+    margin: 32px 0;
     text-align: center;
   }
 }
