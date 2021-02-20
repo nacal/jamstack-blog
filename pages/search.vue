@@ -1,10 +1,7 @@
 <template>
   <div>
-    <article class="p-search">
-      <SearchForm />
-      <Tags />
-      <p class="p-search__title">「{{ query }}」　検索結果 : {{ posts.length }}件</p>
-    </article>
+    <SearchArea />
+    <p class="p-search__title">「{{ query }}」　検索結果 : {{ posts.length }}件</p>
     <section class="p-posts">
       <Card
         v-for="post in posts"
@@ -58,3 +55,12 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.p-search {
+  &__title {
+    margin-top: 32px;
+    text-align: center;
+  }
+}
+</style>
