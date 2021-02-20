@@ -26,7 +26,6 @@
       />
       <Share />
     </div>
-    <ReturnTopPage />
   </section>
 </template>
 

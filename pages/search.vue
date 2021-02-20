@@ -14,7 +14,6 @@
         :tag-slug="post.fields.tag.fields.tagSlug"
       />
     </section>
-    <ReturnTopPage />
   </div>
 </template>
 

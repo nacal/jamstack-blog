@@ -1,8 +1,8 @@
 <template>
   <article>
     <section>
-      <Title 
-        title="お問い合わせ" 
+      <Title
+        title="お問い合わせ"
         subTitle="contact" />
       <v-form
         ref="form"
@@ -48,7 +48,6 @@
         </v-btn>
       </v-form>
     </section>
-    <ReturnTopPage />
   </article>
 
 </template>

@@ -4,7 +4,6 @@
       class="success__heading"
       lang="en">Thank You.</h1>
     <p class="success__message">お問い合わせを受け付けました。</p>
-    <ReturnTopPage />
   </article>
 </template>
 

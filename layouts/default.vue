@@ -4,6 +4,7 @@
     <main class="l-container l-main">
       <nuxt />
     </main>
+    <ReturnTopPage v-if="($route.path != '/')"/>
     <Footer class="l-footer"/>
     <ReturnTop />
   </div>
