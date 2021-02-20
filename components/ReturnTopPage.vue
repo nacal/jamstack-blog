@@ -8,8 +8,12 @@
 
 <style lang="scss" scoped>
 .returnTopPage {
-  margin-top: 72px;
+  margin-bottom: 1rem;
   text-align: center;
+
+  @include mq(tab) {
+    margin-bottom: 0;
+  }
 
   & ._link {
     position: relative;
