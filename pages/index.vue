@@ -1,9 +1,6 @@
 <template>
   <div>
-    <article class="p-search">
-      <SearchForm />
-      <Tags />
-    </article>
+    <SearchArea />
     <section class="p-posts">
       <Card
         v-for="post in pagePosts"

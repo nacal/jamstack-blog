@@ -1,17 +1,8 @@
 <template>
   <div class="p-category">
-    <div class="u-flexCentering -lr">
-      <h2 class="p-category__title c-flex -fxd-c">
-        <span
-          lang="en"
-          class="u-uppercase -en">
-          Category
-        </span>
-        <span class="u-uppercase -ja">
-          {{ category }}
-        </span>
-      </h2>
-    </div>
+    <Title
+      :title="category"
+      subTitle="category" />
     <section class="p-posts">
       <Card
         v-for="post in posts"
@@ -60,7 +51,7 @@ export default {
         break
       case '/tech':
         id = "4CBqPUDWvk1rMj1ePMDYU",
-        category = '技術',
+        category = '技術全般',
         path ='tech'
         break
       case '/others':

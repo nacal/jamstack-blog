@@ -20,7 +20,7 @@
     </li>
     <li class="tags__item">
       <Tag
-        tag-name="技術"
+        tag-name="技術全般"
         tag-slug="tech"
       />
     </li>

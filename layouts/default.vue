@@ -1,10 +1,11 @@
 <template>
-  <div class="body">
-    <Header class="header"/>
-    <main class="container main">
+  <div class="l-body">
+    <Header class="l-header"/>
+    <main class="l-container l-main">
       <nuxt />
     </main>
-    <Footer class="footer"/>
+    <ReturnTopPage v-if="($route.path != '/')"/>
+    <Footer class="l-footer"/>
     <ReturnTop />
   </div>
 </template>
@@ -15,24 +16,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.body {
+.l-body {
   background-color: $base-color;
 }
 
-.header {
+.l-header {
   height: 260px;
 }
 
-.main {
+.l-main {
   min-height: calc(100vh - 380px);
   padding: 4rem 0;
 }
 
-.footer {
+.l-footer {
   height: 120px;
 }
 
-.container {
+.l-container {
   position: relative;
   width: $content-width;
   max-width: 90%;

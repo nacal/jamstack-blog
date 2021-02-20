@@ -4,9 +4,6 @@
       class="success__heading"
       lang="en">Thank You.</h1>
     <p class="success__message">お問い合わせを受け付けました。</p>
-    <nuxt-link
-      to="./"
-      class="success__link">back to home</nuxt-link>
   </article>
 </template>
 
@@ -23,11 +20,6 @@ export default {
 
   &__heading {
     font-size: 3rem;
-  }
-
-  &__link {
-    margin-top: 1rem;
-    text-decoration: underline;
   }
 }
 </style>

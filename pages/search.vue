@@ -1,10 +1,7 @@
 <template>
   <div>
-    <article class="p-search">
-      <SearchForm />
-      <Tags />
-      <p class="p-search__title">「{{ query }}」　検索結果 : {{ posts.length }}件</p>
-    </article>
+    <SearchArea />
+    <p class="p-search__title">「{{ query }}」　検索結果 : {{ posts.length }}件</p>
     <section class="p-posts">
       <Card
         v-for="post in posts"
@@ -40,13 +37,12 @@ export default {
   },
   transition: "fade",
   async asyncData({ env, params, query }) {
-    let data = query.q
-    console.log(data)
+    let search = query.q
     return await client
       .getEntries({
         content_type: env.CTF_BLOG_POST_TYPE_ID,
         order: "-fields.publishedAt",
-        'query': data
+        'query': search
       })
       .then(entries => {
         return {
@@ -57,3 +53,12 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.p-search {
+  &__title {
+    margin: 32px 0;
+    text-align: center;
+  }
+}
+</style>

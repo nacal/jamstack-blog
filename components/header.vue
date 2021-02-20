@@ -25,30 +25,20 @@
       </div>
       <!-- /.l-container -->
       <div class="p-header__sns p-sns c-flex">
-        <a
-          href="https://twitter.com/nkthkr_"
-          target="_blank">
-          <fa
-            :icon="faTwitter"
-            aria-label="Twitterのアイコン"
-            class="p-sns__item -main" />
-        </a>
-        <a
-          href="https://github.com/nkthkr"
-          target="_blank"
-        ><fa
-          :icon="faGithub"
-          aria-label="Githubのアイコン"
-          class="p-sns__item -main"
-        />
-        </a>
+        <Icon
+          v-for="(icon, index) in icons"
+          :key="index"
+          :fa="icon.fa"
+          :class="'-main'"
+          :link="icon.link"
+          :aria-label="icon.label" />
         <nuxt-link
           to="/contact"
         >
           <fa
             :icon="faEnvelope"
             aria-label="お問い合わせのアイコン"
-            class="p-sns__item -main" />
+            class="p-sns__item -main"/>
         </nuxt-link>
       </div>
       <div
@@ -76,9 +66,21 @@ import { faSearch, faEnvelope} from "@fortawesome/free-solid-svg-icons";
 export default {
   data: function() {
     return {
-        active: false,
-        navi: false,
-      };
+      active: false,
+      navi: false,
+      icons: [
+        {
+          fa: faTwitter,
+          link: "https://twitter.com/nkthkr_",
+          label: "Twitterのアイコン"
+        },
+        {
+          fa: faGithub,
+          link: "https://github.com/nkthkr",
+          label: "GitHubのアイコン"
+        },
+      ]
+    };
   },
   computed: {
     faTwitter() {
