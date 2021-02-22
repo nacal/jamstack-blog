@@ -36,7 +36,7 @@ export default {
     }
   },
   transition: "fade",
-  async asyncData({ env, params, query }) {
+  async asyncData({ env, query }) {
     let search = query.q
     return await client
       .getEntries({

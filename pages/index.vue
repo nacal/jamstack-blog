@@ -40,7 +40,7 @@ export default {
       show: true
     }
   },
-  async asyncData({ env, params }) {
+  async asyncData({ env }) {
     return await client
       .getEntries({
         content_type: env.CTF_BLOG_POST_TYPE_ID,
