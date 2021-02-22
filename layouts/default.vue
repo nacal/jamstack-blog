@@ -25,7 +25,7 @@ export default {
 }
 
 .l-main {
-  min-height: calc(100vh - 380px);
+  min-height: calc(100vh - 404px);
   padding: 4rem 0;
 }
 
