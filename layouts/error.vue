@@ -11,9 +11,8 @@
 
 <style lang="scss" scoped>
 .error {
-  height: calc(100vh - 508px);
+  height: calc(100vh - 532px);
   color: $main-color;
-  border: 3px solid $main-color;
 
   &__title {
     text-align: center;

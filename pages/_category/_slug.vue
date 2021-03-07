@@ -36,7 +36,7 @@ import Prism from "~/plugins/prism";
 const client = createClient();
 export default {
   transition: "fade",
-  async asyncData({ env, params, error}) {
+  async asyncData({ env, params }) {
     return await client
       .getEntries({
         content_type: env.CTF_BLOG_POST_TYPE_ID,
