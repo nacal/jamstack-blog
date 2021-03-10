@@ -4,9 +4,6 @@
       <div class="p-header__container u-flexCentering -fd c-flex -fxd-c">
         <div class="u-flexCentering -lr c-flex -fxd-c">
           <h1 class="p-header__title">
-            <span
-              class="u-screenReaderText"
-              lang="en">NKTech</span>
             <nuxt-link
               to="/"
               class="c-logo c-logo--primary">

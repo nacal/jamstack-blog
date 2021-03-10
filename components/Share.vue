@@ -10,36 +10,36 @@
         <a
           :href="twitterUrl()"
           class=" u-flexCentering -fd"
-          target="_blank">
+          target="_blank"
+          aria-label="Twitterで共有">
           <fa
             :icon="faTwitter"
             aria-label="Twitterのアイコン"
             class="p-sns__item -share" />
-          <span class="u-screenReaderText">Twitterで共有</span>
         </a>
       </li>
       <li class="p-shareButton__item -facebook">
         <a
           :href="facebookUrl()"
           class=" u-flexCentering -fd"
-          target="_blank">
+          target="_blank"
+          aria-label="Facebookで共有">
           <fa
             :icon="faFacebookF"
             aria-label="Facebookのアイコン"
             class="p-sns__item -share" />
-          <span class="u-screenReaderText">Facebookで共有</span>
         </a>
       </li>
       <li class="p-shareButton__item -copy">
         <a
           class=" u-flexCentering -fd"
           target="_blank"
+          aria-label="URLをクリップボードにコピー"
           @click="writeToClipboard(url)">
           <fa
             :icon="faLink"
             aria-label="Linkのアイコン"
             class="p-sns__item -share" />
-          <span class="u-screenReaderText">URLをクリップボードにコピー</span>
         </a>
         <p class="p-sns__message">{{ message }}</p>
       </li>

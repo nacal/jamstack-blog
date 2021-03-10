@@ -4,11 +4,12 @@
       <button
         v-show="buttonActive"
         class="p-returnTop"
-        @click="returnTop">
+        aria-label="Topへ戻る"
+        @click="returnTop" >
         <fa
           :icon="faAngleUp"
-          class="p-returnTop__icon" />
-        <span class="u-screenReaderText">Topへ戻る</span>
+          class="p-returnTop__icon"
+          aria-label="上矢印のアイコン" />
       </button>
     </transition>
   </div>
