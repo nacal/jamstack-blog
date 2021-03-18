@@ -11,11 +11,6 @@
 @import "foundation/base";
 
 /* =====================================================
-  2.0 - Layout
-===================================================== */
-@import "layout/container";
-
-/* =====================================================
   3.0 - Object
 ===================================================== */
 
@@ -32,7 +27,6 @@
 @import "object/project/posts";
 @import "object/project/post";
 @import "object/project/postTitle";
-@import "object/project/body";
 @import "object/project/slug";
 @import "object/project/slugFormat";
 @import "object/project/sns";
@@ -44,6 +38,5 @@
 /*
   3.2 - Utility
 ----------------------------------------------------- */
-@import "object/utility/screenReaderText";
 @import "object/utility/uppercase";
 @import "object/utility/flexCentering";
