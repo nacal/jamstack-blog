@@ -1,24 +1,8 @@
 <template>
   <header>
     <div class="header">
-      <div class="header__container u-flexCentering -fd -fxd-c">
-        <h1 class="header__title">
-          <nuxt-link
-            to="/"
-            class="c-logo c-logo--primary">
-            <img
-              src="../assets/images/common/logo-primary.png"
-              srcset="
-                    ../assets/images/common/logo-primary.png    1x,
-                    ../assets/images/common/logo-primary@2x.png 2x
-                  "
-              alt="NKTech"
-            >
-          </nuxt-link>
-        </h1>
-        <h2 class="header__copy">アウトプットをコツコツ積み上げるTechブログ</h2>
-      </div>
-      <Links class="header__sns" />
+      <Title class="header__title u-flexCentering -fd"/>
+      <Links class="header__links" />
       <div
         :class="{'is-active': active}"
         class="SearchForm">
@@ -32,6 +16,7 @@
           :class="{'is-active': active}"
           class="SearchForm__form"/>
       </div>
+      <!-- /.SearchForm -->
     </div>
     <!-- /.header -->
   </header>
@@ -39,8 +24,14 @@
 
 <script>
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import Title from "./Title.vue";
+import Links from "./Links.vue";
 
 export default {
+  components: {
+    Title,
+    Links,
+  },
   data: function() {
     return {
       active: false,
@@ -56,7 +47,7 @@ export default {
     naviOpen: function() {
       this.active = !this.active;
     }
-  }
+  },
 }
 </script>
 
@@ -68,7 +59,7 @@ export default {
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - calc(30vw / 5.37)), 70vw 100%, 0 100%);
   background-color: $main-color;
 
-  &__container {
+  &__title {
     height: 100%;
 
     @include mq(tab) {
@@ -76,24 +67,7 @@ export default {
     }
   }
 
-  &__title {
-    width: 200px;
-    max-width: 75%;
-    margin-bottom: .5rem;
-    line-height: 4rem;
-    text-align: center;
-  }
-
-  &__copy {
-    font-size: .8rem;
-    font-weight: bold;
-
-    @include mq(tab) {
-      font-size: 1rem;
-    }
-  }
-
-  &__sns {
+  &__links {
     position: absolute;
     top: 1rem;
     left: .5rem;
