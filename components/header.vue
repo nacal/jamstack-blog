@@ -1,8 +1,8 @@
 <template>
   <header>
     <div class="header">
-      <div class="header__container u-flexCentering -fd c-flex -fxd-c">
-        <div class="u-flexCentering -lr c-flex -fxd-c">
+      <div class="header__container u-flexCentering -fd -fxd-c">
+        <div class="u-flexCentering -lr -fxd-c">
           <h1 class="header__title">
             <nuxt-link
               to="/"

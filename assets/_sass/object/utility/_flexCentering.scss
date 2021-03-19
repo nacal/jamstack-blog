@@ -22,6 +22,8 @@
   }
 
   &.-fxd-c {
+    flex-direction: column;
+
     &.-tb {
       justify-content: center;
     }
