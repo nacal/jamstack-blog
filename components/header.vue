@@ -1,9 +1,9 @@
 <template>
   <header>
-    <div class="p-header">
-      <div class="p-header__container u-flexCentering -fd c-flex -fxd-c">
+    <div class="header">
+      <div class="header__container u-flexCentering -fd c-flex -fxd-c">
         <div class="u-flexCentering -lr c-flex -fxd-c">
-          <h1 class="p-header__title">
+          <h1 class="header__title">
             <nuxt-link
               to="/"
               class="c-logo c-logo--primary">
@@ -17,11 +17,11 @@
               >
             </nuxt-link>
           </h1>
-          <h2 class="p-header__copy">アウトプットをコツコツ積み上げるTechブログ</h2>
+          <h2 class="header__copy">アウトプットをコツコツ積み上げるTechブログ</h2>
         </div>
       </div>
       <!-- /.l-container -->
-      <div class="p-header__sns p-sns c-flex">
+      <div class="header__sns p-sns c-flex">
         <Icon
           v-for="(icon, index) in icons"
           :key="index"
@@ -102,6 +102,49 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.header {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - calc(30vw / 5.37)), 70vw 100%, 0 100%);
+  background-color: $main-color;
+
+  &__container {
+    height: 100%;
+
+    @include mq(tab) {
+      align-items: flex-start;
+    }
+  }
+
+  &__title {
+    width: 200px;
+    max-width: 75%;
+    margin-bottom: .5rem;
+    line-height: 4rem;
+    text-align: center;
+  }
+
+  &__copy {
+    font-size: .8rem;
+    font-weight: bold;
+
+    @include mq(tab) {
+      font-size: 1rem;
+    }
+  }
+
+  &__sns {
+    position: absolute;
+    top: 1rem;
+    left: .5rem;
+
+    @include mq(tab) {
+      left: 0;
+    }
+  }
+}
+
 .SearchForm {
   position: absolute;
   top: 8px;
