@@ -8,10 +8,10 @@
     <transition name="loading-logo">
       <img
         v-show="loadingLogo"
-        src="../assets/images/common/logo-primary.png"
+        src="@/assets/images/common/logo-primary.png"
         srcset="
-              ../assets/images/common/logo-primary.png    1x,
-              ../assets/images/common/logo-primary@2x.png 2x
+              @/assets/images/common/logo-primary.png    1x,
+              @/assets/images/common/logo-primary@2x.png 2x
             "
         alt="NKTech"
         class="loading__logo"
