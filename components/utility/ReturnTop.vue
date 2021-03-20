@@ -1,18 +1,16 @@
 <template>
-  <div>
-    <transition name="button">
-      <button
-        v-show="buttonActive"
-        class="p-returnTop"
-        aria-label="Topへ戻る"
-        @click="returnTop" >
-        <fa
-          :icon="faAngleUp"
-          class="p-returnTop__icon"
-          aria-label="上矢印のアイコン" />
-      </button>
-    </transition>
-  </div>
+  <transition name="button">
+    <button
+      v-show="buttonActive"
+      class="returnTop"
+      aria-label="Topへ戻る"
+      @click="returnTop" >
+      <fa
+        :icon="faAngleUp"
+        class="returnTop__icon"
+        aria-label="上矢印のアイコン" />
+    </button>
+  </transition>
 </template>
 
 <script>
@@ -63,5 +61,36 @@ export default Vue.extend({
 .button-enter,
 .button-leave-to {
   opacity: 0;
+}
+
+.returnTop {
+  position: fixed;
+  right: 16px;
+  bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+  cursor: pointer;
+  background-color: $main-color;
+  border-radius: 50%;
+  transition: .2s all ease-out 0s;
+
+  @include mq(tab) {
+    right: 32px;
+    bottom: 32px;
+  }
+
+  &__icon {
+    font-size: 2rem;
+  }
+
+  &:hover {
+    transition: .5s all ease-out 0s;
+    transform: scale(.9);
+  }
 }
 </style>
