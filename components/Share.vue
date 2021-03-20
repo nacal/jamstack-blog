@@ -49,7 +49,6 @@
 </template>
 
 <script>
-import Vue from "vue";
 import { faTwitter, faFacebookF} from "@fortawesome/free-brands-svg-icons";
 import { faLink} from "@fortawesome/free-solid-svg-icons";
 
