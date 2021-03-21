@@ -28,7 +28,7 @@ export default {
 .icon {
   &__item {
     line-height: 1;
-    transition: .5s all ease-out 0s;
+    transition: .25s all ease-out 0s;
   }
 
   &__message {
@@ -45,12 +45,12 @@ export default {
 
 .-main {
   .icon__item {
-    margin-left: .5rem;
+    margin-left: .25rem;
     font-size: 1.5rem;
 
     &:hover {
       color: $icon-hover-color;
-      transition: .5s all ease-out 0s;
+      transition: .25s all ease-out 0s;
     }
 
     @include mq(tab) {
