@@ -93,7 +93,7 @@ module.exports = {
   /*
    ** Customize the progress bar color
    */
-  loading: '~/components/Loading.vue',
+  loading: '@/components/utility/Loading.vue',
   /*
    ** Build configuration
    */

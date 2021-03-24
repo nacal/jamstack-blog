@@ -3,15 +3,15 @@
     <transition name="loading">
       <div
         v-show="loading"
-        class="fullScreen"/>
+        class="loading__fullScreen"/>
     </transition>
     <transition name="loading-logo">
       <img
         v-show="loadingLogo"
-        src="../assets/images/common/logo-primary.png"
+        src="@/assets/images/common/logo-primary.png"
         srcset="
-              ../assets/images/common/logo-primary.png    1x,
-              ../assets/images/common/logo-primary@2x.png 2x
+              @/assets/images/common/logo-primary.png    1x,
+              @/assets/images/common/logo-primary@2x.png 2x
             "
         alt="NKTech"
         class="loading__logo"
@@ -42,25 +42,27 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.fullScreen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  background: $main-color;
-}
+<style lang="scss" scoped>
+.loading {
+  &__fullScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: $main-color;
+  }
 
-.loading__logo {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  z-index: 2;
-  width: 320px;
-  max-width: 80%;
-  transform: translate(-50%, -50%);
+  &__logo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    width: 320px;
+    max-width: 80%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .loading-logo-enter-active {

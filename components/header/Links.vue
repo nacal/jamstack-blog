@@ -22,8 +22,12 @@
 <script>
 import { faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope} from "@fortawesome/free-solid-svg-icons";
+import Icon from "@/components/utility/Icon.vue";
 
 export default {
+  components: {
+    Icon,
+  },
   data: function() {
     return {
       icons: [
@@ -60,11 +64,11 @@ export default {
     margin-left: .5rem;
     font-size: 1.5rem;
     line-height: 1;
-    transition: .5s all ease-out 0s;
+    transition: .25s all ease-out 0s;
 
     &:hover {
       color: $icon-hover-color;
-      transition: .5s all ease-out 0s;
+      transition: .25s all ease-out 0s;
     }
 
     @include mq(tab) {
