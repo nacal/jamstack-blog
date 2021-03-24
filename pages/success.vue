@@ -1,8 +1,8 @@
 <template>
   <article class="success">
-    <h1
+    <h2
       class="success__heading"
-      lang="en">Thank You.</h1>
+      lang="en">Thank You.</h2>
     <p class="success__message">お問い合わせを受け付けました。</p>
   </article>
 </template>

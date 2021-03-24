@@ -11,7 +11,18 @@
 </template>
 
 <script>
+import Header from "@/components/header/Header.vue";
+import Footer from "@/components/footer/Footer.vue";
+import ReturnTopPage from "@/components/utility/ReturnTopPage.vue";
+import ReturnTop from "@/components/utility/ReturnTop.vue";
+
 export default {
+  components: {
+    Header,
+    Footer,
+    ReturnTopPage,
+    ReturnTop,
+  }
 };
 </script>
 
