@@ -1,10 +1,10 @@
 <template>
   <div class="p-share u-flexCentering -lr c-flex -fxd-c">
-    <h2
+    <h3
       class="p-share__title u-uppercase"
       lang="en">
       Share
-    </h2>
+    </h3>
     <ul class="p-shareButton c-flex">
       <li class="p-shareButton__item -twitter">
         <a
