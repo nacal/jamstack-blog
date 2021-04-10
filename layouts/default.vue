@@ -49,9 +49,5 @@ export default {
   max-width: 90%;
   height: 100%;
   margin: 0 auto;
-
-  &.-slim {
-    max-width: $slim-content-width;
-  }
 }
 </style>
