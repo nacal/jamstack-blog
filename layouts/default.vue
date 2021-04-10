@@ -13,8 +13,7 @@
 <script>
 import Header from "@/components/header/index.js";
 import Footer from "@/components/footer/index.js";
-import ReturnTopPage from "@/components/utility/ReturnTopPage.vue";
-import ReturnTop from "@/components/utility/ReturnTop.vue";
+import {ReturnTop, ReturnTopPage} from "@/components/utility/index.js";
 
 export default {
   components: {

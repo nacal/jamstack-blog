@@ -22,7 +22,7 @@
 <script>
 import { faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope} from "@fortawesome/free-solid-svg-icons";
-import Icon from "@/components/utility/Icon.vue";
+import Icon from "@/components/utility/index.js";
 
 export default {
   components: {
