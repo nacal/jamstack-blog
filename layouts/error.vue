@@ -22,9 +22,5 @@
     font-size: 5rem;
     line-height: 1em;
   }
-
-  // &__message {
-  //   font-size: 2.5rem;
-  // }
 }
 </style>
