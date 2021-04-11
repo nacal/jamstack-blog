@@ -40,7 +40,12 @@
 </template>
 
 <script>
+import {Tag} from "@/components/utility/index.js";
+
 export default {
+  components: {
+    Tag
+  },
   props: ["title", "slug", "headerImage", "publishedAt", "tag", "tagSlug"]
 };
 </script>
