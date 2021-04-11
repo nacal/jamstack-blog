@@ -33,6 +33,17 @@
   </ul>
 </template>
 
+<script>
+import {Tag} from "@/components/utility/index.js";
+
+export default {
+  components: {
+    Tag
+  }
+}
+</script>
+
+
 <style lang="scss" scoped>
 .tags {
   flex-wrap: wrap;
