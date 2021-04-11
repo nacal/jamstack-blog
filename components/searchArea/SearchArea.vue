@@ -6,8 +6,13 @@
 </template>
 
 <script>
-export default {
+import {SearchForm, Tags} from './index.js'
 
+export default {
+  components: {
+    SearchForm,
+    Tags
+  }
 }
 </script>
 
