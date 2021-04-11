@@ -19,9 +19,13 @@
 
 <script>
 import { createClient } from "~/plugins/contentful.js";
+import SearchArea from "@/components/searchArea/index.js";
 
 const client = createClient();
 export default {
+  components: {
+    SearchArea
+  },
   data() {
     return {
       query: ''

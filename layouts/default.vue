@@ -11,10 +11,9 @@
 </template>
 
 <script>
-import Header from "@/components/header/Header.vue";
-import Footer from "@/components/footer/Footer.vue";
-import ReturnTopPage from "@/components/utility/ReturnTopPage.vue";
-import ReturnTop from "@/components/utility/ReturnTop.vue";
+import Header from "@/components/header/index.js";
+import Footer from "@/components/footer/index.js";
+import {ReturnTop, ReturnTopPage} from "@/components/utility/index.js";
 
 export default {
   components: {
@@ -50,9 +49,5 @@ export default {
   max-width: 90%;
   height: 100%;
   margin: 0 auto;
-
-  &.-slim {
-    max-width: $slim-content-width;
-  }
 }
 </style>
