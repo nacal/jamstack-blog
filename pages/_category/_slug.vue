@@ -32,10 +32,14 @@
 <script>
 import { createClient } from "~/plugins/contentful.js";
 import Prism from "~/plugins/prism";
+import {Tag} from "@/components/utility/index.js";
 
 const client = createClient();
 export default {
   transition: "fade",
+  components: {
+    Tag
+  },
   async asyncData({ env, params }) {
     return await client
       .getEntries({

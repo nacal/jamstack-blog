@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="header">
-      <Title class="header__title u-flexCentering -fd"/>
+      <SiteTitle class="header__title u-flexCentering -fd"/>
       <Links class="header__links" />
       <Search class="header__search c-flex -ai-c" />
     </div>
@@ -9,13 +9,11 @@
 </template>
 
 <script>
-import Title from "./Title.vue";
-import Links from "./Links.vue";
-import Search from "./Search.vue";
+import {SiteTitle, Links, Search} from "./index.js";
 
 export default {
   components: {
-    Title,
+    SiteTitle,
     Links,
     Search,
   },
